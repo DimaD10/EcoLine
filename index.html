@@ -7,10 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoLine</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/logo-icon.svg" type="image/x-icon">
 </head>
 
 <body>
     <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="logo">
+                    <img src="./img/logo-icon.svg" alt="logo" class="logo__icon">
+                    <img src="./img/logo-text.svg" alt="logo" class="logo__text">
+                </a>
+                <nav class="navigation">
+                    <ul class="navigation__menu">
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Home</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">About us</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Pages</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Services</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Blog</a>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Search">
+                        <button class="search__btn">
+                            <svg class="search__btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101">
+                                <path
+                                    d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+                <div class="header__button-box">
+                    <button class="header__button">Get a quote</button>
+                </div>
+
+                <button class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
         <main class="main">
             <section class="main__hero hero">
                 <div class="hero__container">
@@ -7115,7 +7161,7 @@
                     <div class="services-list">
                         <div class="services-card">
                             <div class="services-card__icon">
-                                <svg class="" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1">
+                                <svg viewBox="0 0 32 32" data-name="Layer 1">
                                     <title />
                                     <path class="services-card__path"
                                         d="M25,7H23.82A3,3,0,0,0,21,5H20a3,3,0,0,0-3-3H15a3,3,0,0,0-3,3H11A3,3,0,0,0,8.18,7H7A2,2,0,0,0,5,9V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V9A2,2,0,0,0,25,7ZM11,7h1a2,2,0,0,0,2-2,1,1,0,0,1,1-1h2a1,1,0,0,1,1,1,2,2,0,0,0,2,2h1a1,1,0,0,1,1,1V9H10V8A1,1,0,0,1,11,7ZM25,28H7V9H8a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2h1Z" />
@@ -7128,13 +7174,14 @@
                             </div>
                             <a href="#" class="services-card__name" title="Technical Services">Technical Services</a>
                             <p class="article__paragraph services-card__paragraph">
-                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi, volutpat a iaculis sit amet.
+                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi,
+                                volutpat a iaculis sit amet.
                             </p>
                         </div>
 
                         <div class="services-card">
                             <div class="services-card__icon">
-                                <svg class="" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1">
+                                <svg viewBox="0 0 32 32" data-name="Layer 1">
                                     <title />
                                     <path class="services-card__path"
                                         d="M25,7H23.82A3,3,0,0,0,21,5H20a3,3,0,0,0-3-3H15a3,3,0,0,0-3,3H11A3,3,0,0,0,8.18,7H7A2,2,0,0,0,5,9V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V9A2,2,0,0,0,25,7ZM11,7h1a2,2,0,0,0,2-2,1,1,0,0,1,1-1h2a1,1,0,0,1,1,1,2,2,0,0,0,2,2h1a1,1,0,0,1,1,1V9H10V8A1,1,0,0,1,11,7ZM25,28H7V9H8a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2h1Z" />
@@ -7147,13 +7194,14 @@
                             </div>
                             <a href="#" class="services-card__name" title="Energy Panels">Energy panels</a>
                             <p class="article__paragraph services-card__paragraph">
-                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi, volutpat a iaculis sit amet.
+                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi,
+                                volutpat a iaculis sit amet.
                             </p>
                         </div>
 
                         <div class="services-card">
                             <div class="services-card__icon">
-                                <svg class="" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1">
+                                <svg viewBox="0 0 32 32" data-name="Layer 1">
                                     <title />
                                     <path class="services-card__path"
                                         d="M25,7H23.82A3,3,0,0,0,21,5H20a3,3,0,0,0-3-3H15a3,3,0,0,0-3,3H11A3,3,0,0,0,8.18,7H7A2,2,0,0,0,5,9V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V9A2,2,0,0,0,25,7ZM11,7h1a2,2,0,0,0,2-2,1,1,0,0,1,1-1h2a1,1,0,0,1,1,1,2,2,0,0,0,2,2h1a1,1,0,0,1,1,1V9H10V8A1,1,0,0,1,11,7ZM25,28H7V9H8a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2h1Z" />
@@ -7166,13 +7214,14 @@
                             </div>
                             <a href="#" class="services-card__name" title="Wind Generators">Wind Generators</a>
                             <p class="article__paragraph services-card__paragraph">
-                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi, volutpat a iaculis sit amet.
+                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi,
+                                volutpat a iaculis sit amet.
                             </p>
                         </div>
 
                         <div class="services-card">
                             <div class="services-card__icon">
-                                <svg class="" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1">
+                                <svg viewBox="0 0 32 32" data-name="Layer 1">
                                     <title />
                                     <path class="services-card__path"
                                         d="M25,7H23.82A3,3,0,0,0,21,5H20a3,3,0,0,0-3-3H15a3,3,0,0,0-3,3H11A3,3,0,0,0,8.18,7H7A2,2,0,0,0,5,9V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V9A2,2,0,0,0,25,7ZM11,7h1a2,2,0,0,0,2-2,1,1,0,0,1,1-1h2a1,1,0,0,1,1,1,2,2,0,0,0,2,2h1a1,1,0,0,1,1,1V9H10V8A1,1,0,0,1,11,7ZM25,28H7V9H8a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2h1Z" />
@@ -7185,13 +7234,14 @@
                             </div>
                             <a href="#" class="services-card__name" title="Solar As A Service">Solar as a service</a>
                             <p class="article__paragraph services-card__paragraph">
-                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi, volutpat a iaculis sit amet.
+                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi,
+                                volutpat a iaculis sit amet.
                             </p>
                         </div>
 
                         <div class="services-card">
                             <div class="services-card__icon">
-                                <svg class="" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1">
+                                <svg viewBox="0 0 32 32" data-name="Layer 1">
                                     <title />
                                     <path class="services-card__path"
                                         d="M25,7H23.82A3,3,0,0,0,21,5H20a3,3,0,0,0-3-3H15a3,3,0,0,0-3,3H11A3,3,0,0,0,8.18,7H7A2,2,0,0,0,5,9V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V9A2,2,0,0,0,25,7ZM11,7h1a2,2,0,0,0,2-2,1,1,0,0,1,1-1h2a1,1,0,0,1,1,1,2,2,0,0,0,2,2h1a1,1,0,0,1,1,1V9H10V8A1,1,0,0,1,11,7ZM25,28H7V9H8a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2h1Z" />
@@ -7204,13 +7254,14 @@
                             </div>
                             <a href="#" class="services-card__name" title="Solar PV Systems">Solar PV Systems</a>
                             <p class="article__paragraph services-card__paragraph">
-                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi, volutpat a iaculis sit amet.
+                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi,
+                                volutpat a iaculis sit amet.
                             </p>
                         </div>
 
                         <div class="services-card">
                             <div class="services-card__icon">
-                                <svg class="" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1">
+                                <svg viewBox="0 0 32 32" data-name="Layer 1">
                                     <title />
                                     <path class="services-card__path"
                                         d="M25,7H23.82A3,3,0,0,0,21,5H20a3,3,0,0,0-3-3H15a3,3,0,0,0-3,3H11A3,3,0,0,0,8.18,7H7A2,2,0,0,0,5,9V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V9A2,2,0,0,0,25,7ZM11,7h1a2,2,0,0,0,2-2,1,1,0,0,1,1-1h2a1,1,0,0,1,1,1,2,2,0,0,0,2,2h1a1,1,0,0,1,1,1V9H10V8A1,1,0,0,1,11,7ZM25,28H7V9H8a2,2,0,0,0,2,2H22a2,2,0,0,0,2-2h1Z" />
@@ -7221,16 +7272,114 @@
                                         d="M15.29,6.71A1,1,0,0,0,16,7l.19,0a.6.6,0,0,0,.19-.06.56.56,0,0,0,.17-.09l.16-.12a1,1,0,0,0,.21-.33A1,1,0,0,0,17,6a1.36,1.36,0,0,0,0-.2.64.64,0,0,0-.06-.18.76.76,0,0,0-.09-.18l-.12-.15a1,1,0,0,0-1.42,0A1,1,0,0,0,15,6a1,1,0,0,0,.08.38A1,1,0,0,0,15.29,6.71Z" />
                                 </svg>
                             </div>
-                            <a href="#" class="services-card__name" title="Inspection Checklist">Inspection Checklist</a>
+                            <a href="#" class="services-card__name" title="Inspection Checklist">Inspection
+                                Checklist</a>
                             <p class="article__paragraph services-card__paragraph">
-                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi, volutpat a iaculis sit amet.
+                                Donev vestibulum arcu a arcu scelerisque, quis dignissim turpis semper onec tortor mi,
+                                volutpat a iaculis sit amet.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
+            <section class="main__work work">
+                <div class="work__container">
+                    
+                </div>
+            </section>
         </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__article">
+                    <img src="./img/footer/logo.svg" alt="logo" class="footer__logo">
+                    <p class="footer-paragraph">
+                        Ecoline is a financial and technological global operator that preserves the environment using
+                        both its own and third-party scientific developments in the renewable energy resources field and
+                        reduces pressure on the ecosystem by increasing the efficiency of energy-saving technologies.
+                    </p>
+                </div>
+
+                <div class="footer-navigation__box">
+                    <nav class="footer-navigation">
+                        <div class="footer-navigation__title">Our Links</div>
+    
+                        <div class="footer-menu__box">
+                            <ul class="footer-menu">
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Home</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Services</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">FAQ</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Contact us</a>
+                                </li>
+                            </ul>
+                            <ul class="footer-menu">
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">About us</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Term</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="footer-navigation__box">
+                    <nav class="footer-navigation get-in-touch">
+                        <div class="footer-navigation__title">Get In touch</div>
+    
+                        <div class="footer-menu__box">
+                            <div class="get-in-touch__block">
+                                <div class="get-in-touch__icon">
+                                    <svg fill="#fff" viewBox="0 0 50 50" enable-background="new 0 0 50 50">
+    
+                                        <g stroke-width="0"/>
+                                        
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        
+                                        <g> <path d="M41.798,33.763v-18c0-0.513-0.39-0.919-0.887-0.977c-0.009-0.002-0.017-0.004-0.025-0.005 c-0.03-0.003-0.057-0.018-0.088-0.018h-30c-0.032,0-0.06,0.015-0.091,0.018c-0.065,0.006-0.126,0.019-0.189,0.038 c-0.065,0.019-0.125,0.041-0.183,0.072c-0.053,0.028-0.1,0.062-0.147,0.099c-0.056,0.044-0.105,0.09-0.151,0.145 c-0.019,0.023-0.045,0.035-0.062,0.06c-0.019,0.027-0.022,0.06-0.038,0.088c-0.034,0.06-0.059,0.12-0.08,0.187 c-0.02,0.065-0.033,0.129-0.039,0.196c-0.003,0.033-0.019,0.062-0.019,0.096v18c0,0.553,0.447,1,1,1h30 C41.351,34.763,41.798,34.315,41.798,33.763z M37.502,16.763l-11.745,8.092l-11.745-8.092H37.502z M11.798,32.763V17.666 l13.392,9.227c0.171,0.118,0.369,0.177,0.567,0.177s0.396-0.059,0.567-0.177l13.474-9.283v15.153H11.798z"/> </g>
+                                        
+                                    </svg>
+                                </div>
+                                <div class="get-in-touch__offer">
+                                    <div class="get-in-touch__name">Main office</div>
+                                    <a href="mailto:info@echoline.ltd" class="get-in-touch__contact">info@echoline.ltd</a>
+                                </div>
+                            </div>
+                            <div class="get-in-touch__block">
+                                <div class="get-in-touch__icon">
+                                    <svg fill="#fff" viewBox="0 0 50 50" enable-background="new 0 0 50 50">
+    
+                                        <g stroke-width="0"/>
+                                        
+                                        <g stroke-linecap="round" stroke-linejoin="round"/>
+                                        
+                                        <g> <path d="M41.798,33.763v-18c0-0.513-0.39-0.919-0.887-0.977c-0.009-0.002-0.017-0.004-0.025-0.005 c-0.03-0.003-0.057-0.018-0.088-0.018h-30c-0.032,0-0.06,0.015-0.091,0.018c-0.065,0.006-0.126,0.019-0.189,0.038 c-0.065,0.019-0.125,0.041-0.183,0.072c-0.053,0.028-0.1,0.062-0.147,0.099c-0.056,0.044-0.105,0.09-0.151,0.145 c-0.019,0.023-0.045,0.035-0.062,0.06c-0.019,0.027-0.022,0.06-0.038,0.088c-0.034,0.06-0.059,0.12-0.08,0.187 c-0.02,0.065-0.033,0.129-0.039,0.196c-0.003,0.033-0.019,0.062-0.019,0.096v18c0,0.553,0.447,1,1,1h30 C41.351,34.763,41.798,34.315,41.798,33.763z M37.502,16.763l-11.745,8.092l-11.745-8.092H37.502z M11.798,32.763V17.666 l13.392,9.227c0.171,0.118,0.369,0.177,0.567,0.177s0.396-0.059,0.567-0.177l13.474-9.283v15.153H11.798z"/> </g>
+                                        
+                                    </svg>
+                                </div>
+                                <div class="get-in-touch__offer">
+                                    <div class="get-in-touch__name">Support</div>
+                                    <a href="mailto:support@echoline.ltd" class="get-in-touch__contact">support@echoline.ltd</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>    
+                </div>
+            </div>
+        </footer>
     </div>
+
+    <script src="./js/burger.js"></script>
 </body>
 
 </html>
