@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoLine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/logo-icon.svg" type="image/x-icon">
 </head>
@@ -7287,7 +7288,7 @@
                     <div class="popup__window" id="popup">
                         <div class="popup__head">
                             <button class="popup__close">
-                                <svg stroke="#fff" viewBox="0 0 512 512" xml:space="preserve" stroke="#ff0000">
+                                <svg viewBox="0 0 512 512" xml:space="preserve" stroke="#ff0000">
 
                                     <g stroke-width="0" />
 
@@ -7307,7 +7308,7 @@
                         </div>
 
                         <iframe class="presentation-video" src="https://www.youtube.com/embed/LcvlSdTxh5U"
-                            title="YouTube video player" frameborder="0"
+                            title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
@@ -7384,6 +7385,173 @@
                     </div>
                 </div>
             </section>
+
+            <section class="main__feedback feedback">
+                <img src="./img/feedback/bg.png" alt="ecoline" class="feedback__bg">
+
+                <div class="feedback__container">
+                    <div class="feedback__head">
+                        <div class="feedback__article article">
+                            <p class="feedback__subtitle subtitle">Our Services</p>
+                            <h2 class="article__title feedback__title title">
+                                What's Our resources story
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="feedback__body">
+                        <form class="feedback-form">
+                            <div class="feedback-form__form">
+                                <div class="feedback-form__area">
+                                    <label for="name" class="feedback-form__label">Name</label>
+                                    <input type="text" name="name" id="name" class="feedback-form__input"
+                                        placeholder="Write your name...">
+                                </div>
+                                <div class="feedback-form__area">
+                                    <label for="review" class="feedback-form__label">Review</label>
+                                    <textarea name="review" id="review" placeholder="Write your review..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="feedback-form__button">Write review</button>
+                        </form>
+                        <div class="feedback-slider">
+                            <div class="feedback-slider__wrapper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide review">
+                                        <p class="review__text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero dolorum
+                                            laboriosam excepturi neque magni fugiat. Suscipit culpa, veniam explicabo quae
+                                            eaque sapiente et dolore nihil?
+                                        </p>
+                                        <div class="review__user user">
+                                            <div class="user__avatar-box">
+                                                <img src="./img/users/user1.png" alt="user" class="user__avatar empty">
+                                            </div>
+    
+                                            <div class="user__info">
+                                                <span class="user__name">Margie R. Robinson</span>
+                                                <span class="user__status">Web Developer</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="review__decor">
+                                            <svg fill="#000000" viewBox="0 0 123.961 123.961" xml:space="preserve" transform="rotate(180)">
+    
+                                                <g stroke-width="0" />
+    
+                                                <g stroke-linecap="round" stroke-linejoin="round" />
+    
+                                                <g>
+                                                    <g>
+                                                        <path
+                                                            d="M49.8,29.032c3.1-1.3,4.4-5,3-8l-4.9-10.3c-1.4-2.899-4.8-4.2-7.8-2.899c-8.5,3.6-15.8,8.3-21.6,14 C11.4,28.532,6.6,36.232,4,44.732c-2.6,8.601-4,20.3-4,35.2v30.7c0,3.3,2.7,6,6,6h39.3c3.3,0,6-2.7,6-6v-39.3c0-3.301-2.7-6-6-6 H26.5c0.2-10.101,2.6-18.2,7-24.301C37.1,36.133,42.5,32.133,49.8,29.032z" />
+                                                        <path
+                                                            d="M120.4,29.032c3.1-1.3,4.399-5,3-8l-4.9-10.199c-1.4-2.9-4.8-4.2-7.8-2.9c-8.4,3.6-15.601,8.3-21.5,13.9 c-7.101,6.8-12,14.5-14.601,23c-2.6,8.399-3.899,20.1-3.899,35.1v30.7c0,3.3,2.7,6,6,6H116c3.3,0,6-2.7,6-6v-39.3 c0-3.301-2.7-6-6-6H97.1c0.2-10.101,2.601-18.2,7-24.301C107.7,36.133,113.1,32.133,120.4,29.032z" />
+                                                    </g>
+                                                </g>
+    
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide review">
+                                        <p class="review__text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero dolorum
+                                            laboriosam excepturi neque magni fugiat. Suscipit culpa, veniam explicabo quae
+                                            eaque sapiente et dolore nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <div class="review__user user">
+                                            <div class="user__avatar-box">
+                                                <img src="./img/users/user1.png" alt="user" class="user__avatar empty">
+                                            </div>
+    
+                                            <div class="user__info">
+                                                <span class="user__name">Margie R. Robinson</span>
+                                                <span class="user__status">Web Developer</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="review__decor">
+                                            <svg fill="#000000" viewBox="0 0 123.961 123.961" xml:space="preserve" transform="rotate(180)">
+    
+                                                <g stroke-width="0" />
+    
+                                                <g stroke-linecap="round" stroke-linejoin="round" />
+    
+                                                <g>
+                                                    <g>
+                                                        <path
+                                                            d="M49.8,29.032c3.1-1.3,4.4-5,3-8l-4.9-10.3c-1.4-2.899-4.8-4.2-7.8-2.899c-8.5,3.6-15.8,8.3-21.6,14 C11.4,28.532,6.6,36.232,4,44.732c-2.6,8.601-4,20.3-4,35.2v30.7c0,3.3,2.7,6,6,6h39.3c3.3,0,6-2.7,6-6v-39.3c0-3.301-2.7-6-6-6 H26.5c0.2-10.101,2.6-18.2,7-24.301C37.1,36.133,42.5,32.133,49.8,29.032z" />
+                                                        <path
+                                                            d="M120.4,29.032c3.1-1.3,4.399-5,3-8l-4.9-10.199c-1.4-2.9-4.8-4.2-7.8-2.9c-8.4,3.6-15.601,8.3-21.5,13.9 c-7.101,6.8-12,14.5-14.601,23c-2.6,8.399-3.899,20.1-3.899,35.1v30.7c0,3.3,2.7,6,6,6H116c3.3,0,6-2.7,6-6v-39.3 c0-3.301-2.7-6-6-6H97.1c0.2-10.101,2.601-18.2,7-24.301C107.7,36.133,113.1,32.133,120.4,29.032z" />
+                                                    </g>
+                                                </g>
+    
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide review">
+                                        <p class="review__text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero dolorum
+                                            laboriosam excepturi neque magni fugiat. Suscipit culpa, veniam explicabo quae
+                                            eaque sapiente et dolore nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti libero dolorum
+                                            laboriosam excepturi neque magni fugiat. Suscipit culpa, veniam explicabo quae
+                                            eaque sapiente et dolore nihil?
+                                        </p>
+                                        <div class="review__user user">
+                                            <div class="user__avatar-box">
+                                                <img src="./img/users/user1.png" alt="user" class="user__avatar empty">
+                                            </div>
+    
+                                            <div class="user__info">
+                                                <span class="user__name">Margie R. Robinson</span>
+                                                <span class="user__status">Web Developer</span>
+                                            </div>
+                                        </div>
+    
+                                        <div class="review__decor">
+                                            <svg fill="#000000" viewBox="0 0 123.961 123.961" xml:space="preserve" transform="rotate(180)">
+    
+                                                <g stroke-width="0" />
+    
+                                                <g stroke-linecap="round" stroke-linejoin="round" />
+    
+                                                <g>
+                                                    <g>
+                                                        <path
+                                                            d="M49.8,29.032c3.1-1.3,4.4-5,3-8l-4.9-10.3c-1.4-2.899-4.8-4.2-7.8-2.899c-8.5,3.6-15.8,8.3-21.6,14 C11.4,28.532,6.6,36.232,4,44.732c-2.6,8.601-4,20.3-4,35.2v30.7c0,3.3,2.7,6,6,6h39.3c3.3,0,6-2.7,6-6v-39.3c0-3.301-2.7-6-6-6 H26.5c0.2-10.101,2.6-18.2,7-24.301C37.1,36.133,42.5,32.133,49.8,29.032z" />
+                                                        <path
+                                                            d="M120.4,29.032c3.1-1.3,4.399-5,3-8l-4.9-10.199c-1.4-2.9-4.8-4.2-7.8-2.9c-8.4,3.6-15.601,8.3-21.5,13.9 c-7.101,6.8-12,14.5-14.601,23c-2.6,8.399-3.899,20.1-3.899,35.1v30.7c0,3.3,2.7,6,6,6H116c3.3,0,6-2.7,6-6v-39.3 c0-3.301-2.7-6-6-6H97.1c0.2-10.101,2.601-18.2,7-24.301C107.7,36.133,113.1,32.133,120.4,29.032z" />
+                                                    </g>
+                                                </g>
+    
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="main__partners partners">
+                <div class="partners__container">
+                    <div class="partners__list">
+                        <div class="partner">
+                            <img src="./img/partners/logo1.png" alt="logo" class="partner__logo">
+                        </div>
+                        <div class="partner">
+                            <img src="./img/partners/logo1.png" alt="logo" class="partner__logo">
+                        </div>
+                        <div class="partner">
+                            <img src="./img/partners/logo1.png" alt="logo" class="partner__logo">
+                        </div>
+                        <div class="partner">
+                            <img src="./img/partners/logo1.png" alt="logo" class="partner__logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -7486,6 +7654,8 @@
 
     <script src="./js/burger.js"></script>
     <script src="./js/modal-video.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 
 </html>
