@@ -494,6 +494,8 @@ main {
 }
 .logo__icon {
   width: 53px;
+  -webkit-animation: animLogoTotal infinite linear 4s;
+          animation: animLogoTotal infinite linear 4s;
 }
 @media (max-width: 1200px) {
   .logo__icon {
@@ -771,24 +773,24 @@ main {
   }
 }
 .logo-folk1 {
-  -webkit-animation: logoAnim infinite linear 3s;
-          animation: logoAnim infinite linear 3s;
+  -webkit-animation: logoAnim infinite linear 4s;
+          animation: logoAnim infinite linear 4s;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
 .logo-folk2 {
-  -webkit-animation: logoAnim infinite linear 3s;
-          animation: logoAnim infinite linear 3s;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  -webkit-animation: logoAnim infinite linear 4s;
+          animation: logoAnim infinite linear 4s;
+  -webkit-animation-delay: 0.44s;
+          animation-delay: 0.44s;
 }
 
 .logo-line {
-  -webkit-animation: logoAnim infinite linear 3s;
-          animation: logoAnim infinite linear 3s;
-  -webkit-animation-delay: 0.55s;
-          animation-delay: 0.55s;
+  -webkit-animation: logoLineAnim infinite linear 4s;
+          animation: logoLineAnim infinite linear 4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 @-webkit-keyframes logoAnim {
@@ -796,13 +798,29 @@ main {
     -webkit-transform: translate(0, 0) rotate(0);
             transform: translate(0, 0) rotate(0);
   }
-  33% {
-    -webkit-transform: translate(1px, 1px) rotate(-2deg);
-            transform: translate(1px, 1px) rotate(-2deg);
+  5% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
-  66% {
-    -webkit-transform: translate(-1px, 2px) rotate(1deg);
-            transform: translate(-1px, 2px) rotate(1deg);
+  10% {
+    -webkit-transform: translate(1px, 2px) rotate(-3deg) scale(0.95);
+            transform: translate(1px, 2px) rotate(-3deg) scale(0.95);
+  }
+  15% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  36% {
+    -webkit-transform: translate(-1px, 3px) rotate(1deg) scale(1);
+            transform: translate(-1px, 3px) rotate(1deg) scale(1);
   }
 }
 
@@ -811,13 +829,125 @@ main {
     -webkit-transform: translate(0, 0) rotate(0);
             transform: translate(0, 0) rotate(0);
   }
-  33% {
-    -webkit-transform: translate(1px, 1px) rotate(-2deg);
-            transform: translate(1px, 1px) rotate(-2deg);
+  5% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
   }
-  66% {
-    -webkit-transform: translate(-1px, 2px) rotate(1deg);
-            transform: translate(-1px, 2px) rotate(1deg);
+  10% {
+    -webkit-transform: translate(1px, 2px) rotate(-3deg) scale(0.95);
+            transform: translate(1px, 2px) rotate(-3deg) scale(0.95);
+  }
+  15% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  36% {
+    -webkit-transform: translate(-1px, 3px) rotate(1deg) scale(1);
+            transform: translate(-1px, 3px) rotate(1deg) scale(1);
+  }
+}
+@-webkit-keyframes logoLineAnim {
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    -webkit-transform: translate(1px, 2px) rotate(-2deg) scale(0.95) skew(0, 1deg);
+            transform: translate(1px, 2px) rotate(-2deg) scale(0.95) skew(0, 1deg);
+  }
+  20% {
+    -webkit-transform: skew(0deg, 1deg) rotate(2deg);
+            transform: skew(0deg, 1deg) rotate(2deg);
+  }
+  36% {
+    -webkit-transform: translate(-1px, 3px) rotate(2deg) scale(1);
+            transform: translate(-1px, 3px) rotate(2deg) scale(1);
+  }
+}
+@keyframes logoLineAnim {
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  10% {
+    -webkit-transform: translate(1px, 2px) rotate(-2deg) scale(0.95) skew(0, 1deg);
+            transform: translate(1px, 2px) rotate(-2deg) scale(0.95) skew(0, 1deg);
+  }
+  20% {
+    -webkit-transform: skew(0deg, 1deg) rotate(2deg);
+            transform: skew(0deg, 1deg) rotate(2deg);
+  }
+  36% {
+    -webkit-transform: translate(-1px, 3px) rotate(2deg) scale(1);
+            transform: translate(-1px, 3px) rotate(2deg) scale(1);
+  }
+}
+@-webkit-keyframes animLogoTotal {
+  0%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  10% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  15% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  36% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+}
+@keyframes animLogoTotal {
+  0%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  10% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  15% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  36% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
   }
 }
 .main__hero {
@@ -3311,6 +3441,7 @@ main {
   z-index: -1;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   top: 0;
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#A6DA41), to(#77C31C));
