@@ -508,6 +508,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: animLogo infinite cubic-bezier(0.51, 0.27, 0.5, 0.84) 7s;
+          animation: animLogo infinite cubic-bezier(0.51, 0.27, 0.5, 0.84) 7s;
 }
 @media (max-width: 767.98px) {
   .logo {
@@ -516,8 +518,6 @@ main {
 }
 .logo__icon {
   width: 53px;
-  -webkit-animation: animLogo infinite cubic-bezier(0.51, 0.27, 0.5, 0.84) 7s;
-          animation: animLogo infinite cubic-bezier(0.51, 0.27, 0.5, 0.84) 7s;
 }
 @media (max-width: 1200px) {
   .logo__icon {
@@ -781,38 +781,38 @@ main {
 }
 @-webkit-keyframes animLogo {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
   }
   15% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
   }
   15.001% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
 }
 @keyframes animLogo {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
   }
   15% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
   }
   15.001% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
 }
 .main__hero {
