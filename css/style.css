@@ -295,8 +295,88 @@ main {
 }
 
 .select {
-  display: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 120;
+  margin-right: 4px;
 }
+@media (max-width: 480px) {
+  .select {
+    margin-left: auto;
+  }
+}
+.select__header {
+  padding: 6px;
+  cursor: pointer;
+}
+.select__current {
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+}
+.select__current .lang-icon {
+  pointer-events: none;
+}
+.select__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  position: absolute;
+  width: 100%;
+  gap: 10px;
+  top: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0px 6px;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: padding ease-in-out 0.3s, height ease-in-out 0.3s;
+  transition: padding ease-in-out 0.3s, height ease-in-out 0.3s;
+}
+.select__icon {
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+}
+.select__icon svg {
+  width: 6px;
+}
+.select__item {
+  -webkit-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+  cursor: pointer;
+}
+.select__item:hover {
+  opacity: 0.5;
+}
+
+.lang-icon {
+  width: 22px;
+}
+
+.spoiler-opened {
+  height: 226px;
+  padding: 4px 6px;
+}
+
+.spoiler__button-active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -335,10 +415,12 @@ main {
 }
 @media (max-width: 480px) {
   .header__container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto 1fr auto;
-    grid-template-columns: auto 1fr auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .header__logo {
@@ -373,11 +455,6 @@ main {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-}
-@media (max-width: 480px) {
-  .header__button-box {
-    margin: 0 auto;
   }
 }
 .header__button {
