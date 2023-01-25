@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLine</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/roadmap.css">
+    <link rel="icon" href="../img/logo-icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="../index.html" class="header__logo logo">
+                    <svg class="logo__icon" viewBox="0 0 53 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-folk1" d="M44.8287 7C44.1651 7.41024 39 10 34.5 10C26.5 10 26.5 15.5 24.7758 16.3579C23.0516 17.2158 22.3293 16.241 22.1193 15.3207C21.7208 13.5754 22.4333 11.8857 22.6143 11.4041C22.7953 10.9225 25.0762 6.89533 31.2827 5.43636C38.5668 3.72407 39.2185 5.73215 44.8287 4.44793C48.7532 3.54958 51.5174 0.784801 52 0C48.3805 14.5545 35.6449 17 31.2827 17C29.5438 17 27.0279 13.4097 33 12.5C38.9721 11.5903 44.3914 7.65995 44.8287 7Z" fill="url(#paint0_linear_3_480)"/>
+                        <path class="logo-folk2" d="M8.1713 37C8.83486 36.5898 14 34 18.5 34C26.5 34 26.5 28.5 28.2242 27.6421C29.9484 26.7842 30.6707 27.759 30.8807 28.6793C31.2792 30.4246 30.5667 32.1143 30.3857 32.5959C30.2047 33.0775 27.9238 37.1047 21.7173 38.5636C14.4332 40.2759 13.7815 38.2678 8.1713 39.5521C4.2468 40.4504 1.48259 43.2152 1 44C4.61947 29.4455 17.3551 27 21.7173 27C23.4562 27 25.9721 30.5903 20 31.5C14.0279 32.4097 8.60865 36.3401 8.1713 37Z" fill="url(#paint1_linear_3_480)"/>
+                        <path class="logo-line" d="M26.5 23.8704C0 23.8704 0.59417 31.9568 0 36C0 22.3968 13.6659 20.1296 26.5 20.1296C53 20.1296 52.4058 12.0432 53 8C53 21.6032 39.3341 23.8704 26.5 23.8704Z" fill="url(#paint2_linear_3_480)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_3_480" x1="0" y1="40.5853" x2="51.3377" y2="1.2937" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#77C21C"/>
+                        <stop offset="1" stop-color="#A4D940"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_3_480" x1="0" y1="40.5853" x2="51.3377" y2="1.2937" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#77C21C"/>
+                        <stop offset="1" stop-color="#A4D940"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_3_480" x1="0" y1="40.5853" x2="51.3377" y2="1.2937" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#77C21C"/>
+                        <stop offset="1" stop-color="#A4D940"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <svg class="logo__text" viewBox="0 0 138 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g class="second-word">
+                            <path d="M80.4122 21.1948L79.7648 24H66L71.6558 0H74.9608L69.9523 21.1948H80.4122Z" fill="black"/>
+                            <path d="M91.3244 0H94.6293L88.9735 24H85.6686L91.3244 0Z" fill="black"/>
+                            <path d="M109.849 24C109.44 22.6609 108.952 21.1371 108.384 19.4286C107.816 17.7201 107.191 15.9885 106.51 14.2338C105.851 12.4791 105.17 10.7821 104.466 9.14286C103.761 7.48052 103.069 6.03752 102.387 4.81385L97.8557 24H94.619L100.275 0H103.103C103.83 1.24675 104.568 2.66666 105.317 4.25974C106.09 5.82972 106.816 7.44589 107.498 9.10823C108.202 10.7706 108.849 12.3983 109.44 13.9913C110.031 15.5844 110.519 17.0159 110.905 18.2857L115.13 0H118.367L112.745 24H109.849Z" fill="black"/>
+                            <path d="M118.409 24L124.065 0H138L137.353 2.80519H126.688L124.985 10.0433H134.457L133.809 12.7792H124.371L122.361 21.1948H133.809L133.162 24H118.409Z" fill="black"/>    
+                        </g>
+                        <g class="first-word">
+                            <path d="M0 23.5353L5.50206 0.531121H20.5167L19.4561 4.78008H9.61203L8.55139 9.42739H17.2354L16.2079 13.61H7.5239L6.1981 19.2531H16.8045L15.7438 23.5353H0Z" fill="url(#paint0_linear_67_11268)"/>
+                            <path d="M37.5449 22.5394C36.639 22.982 35.6336 23.3361 34.5287 23.6017C33.4239 23.8672 32.076 24 30.485 24C29.1151 24 27.8555 23.7787 26.7065 23.3361C25.5796 22.8714 24.6073 22.2185 23.7898 21.3776C22.9943 20.5367 22.3756 19.5187 21.9337 18.3237C21.4917 17.1065 21.2708 15.7455 21.2708 14.2407C21.2708 12.5145 21.5691 10.7994 22.1657 9.09544C22.7844 7.39142 23.6793 5.87552 24.8504 4.54772C26.0436 3.19779 27.491 2.10235 29.1924 1.26141C30.9159 0.420471 32.8936 0 35.1253 0C36.186 0 37.2245 0.121716 38.241 0.365147C39.2795 0.608577 40.3622 1.04011 41.4892 1.65975L39.633 5.67635C38.705 5.18949 37.8764 4.85754 37.1472 4.6805C36.418 4.50346 35.6336 4.41494 34.7939 4.41494C33.5344 4.41494 32.3964 4.66943 31.38 5.17842C30.3856 5.68741 29.5238 6.38451 28.7947 7.26971C28.0876 8.13278 27.5462 9.1397 27.1706 10.2905C26.7949 11.4412 26.6071 12.6584 26.6071 13.9419C26.6071 15.8894 27.0269 17.3057 27.8666 18.1909C28.7284 19.0761 29.9547 19.5187 31.5457 19.5187C32.6063 19.5187 33.5786 19.408 34.4624 19.1867C35.3684 18.9654 36.2081 18.6777 36.9814 18.3237L37.5449 22.5394Z" fill="url(#paint1_linear_67_11268)"/>
+                            <path d="M54.2554 4.44813C53.2389 4.44813 52.2888 4.71369 51.4049 5.24481C50.5432 5.77593 49.7808 6.48409 49.1179 7.36929C48.4771 8.25449 47.9689 9.27248 47.5933 10.4232C47.2397 11.574 47.0629 12.758 47.0629 13.9751C47.0629 15.6349 47.4054 16.9848 48.0904 18.0249C48.7975 19.0429 49.9355 19.5519 51.5044 19.5519C52.5208 19.5519 53.4599 19.2863 54.3217 18.7552C55.2056 18.2241 55.9679 17.5159 56.6087 16.6307C57.2716 15.7455 57.7798 14.7386 58.1333 13.61C58.509 12.4592 58.6968 11.2642 58.6968 10.0249C58.6968 8.36515 58.3433 7.02628 57.6362 6.0083C56.9512 4.96819 55.8242 4.44813 54.2554 4.44813ZM50.974 24C49.6261 24 48.3887 23.7787 47.2618 23.3361C46.1349 22.8935 45.1626 22.2628 44.3451 21.444C43.5275 20.603 42.8867 19.5851 42.4227 18.39C41.9807 17.195 41.7598 15.8451 41.7598 14.3403C41.7598 12.6141 42.0581 10.899 42.6547 9.19502C43.2513 7.49101 44.102 5.96404 45.2068 4.61411C46.3338 3.24205 47.7037 2.13555 49.3168 1.29461C50.9299 0.431536 52.7528 0 54.7857 0C56.1336 0 57.371 0.2213 58.4979 0.663901C59.6249 1.1065 60.5971 1.74827 61.4147 2.58921C62.2323 3.40802 62.862 4.41494 63.304 5.60996C63.768 6.80498 64 8.15491 64 9.65975C64 11.3859 63.7017 13.112 63.1051 14.8382C62.5306 16.5422 61.6799 18.0802 60.5529 19.4523C59.4481 20.8022 58.0892 21.8977 56.4761 22.7386C54.863 23.5795 53.029 24 50.974 24Z" fill="url(#paint2_linear_67_11268)"/>    
+                        </g>
+                        <defs>
+                        <linearGradient id="paint0_linear_67_11268" x1="0" y1="24" x2="32.303" y2="-22.1747" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#77C21C"/>
+                        <stop offset="1" stop-color="#A4D940"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_67_11268" x1="0" y1="24" x2="32.303" y2="-22.1747" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#77C21C"/>
+                        <stop offset="1" stop-color="#A4D940"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_67_11268" x1="0" y1="24" x2="32.303" y2="-22.1747" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#77C21C"/>
+                        <stop offset="1" stop-color="#A4D940"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+
+                <nav class="navigation">
+                    <ul class="navigation__menu">
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Home</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">About us</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Pages</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Services</a>
+                        </li>
+                        <li class="navigation__el">
+                            <a href="#" class="navigation__link">Blog</a>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Search">
+                        <button class="search__btn">
+                            <svg class="search__btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101">
+                                <path
+                                    d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="select">
+                    <div class="select__header" data-action="show">
+                        <div class="select__current">
+                            <img src="../img/flags/en.png" alt="eng" class="lang-icon">
+                            <div class="select__icon">
+                                <svg viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 23L0.00961876 0.5L25.9904 0.5L13 23Z" fill="black"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select__body">
+                        <span class="select__item" title="Spain">
+                            <img src="../img/flags/es.png" alt="esp" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="Vietnam">
+                            <img src="../img/flags/vn.png" alt="vnm" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="Italy">
+                            <img src="../img/flags/it.png" alt="ita" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="Germany">
+                            <img src="../img/flags/de.png" alt="deu" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="France">
+                            <img src="../img/flags/fr.png" alt="fra" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="Russia">
+                            <img src="../img/flags/ru.png" alt="rus" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="China">
+                            <img src="../img/flags/cn.png" alt="chn" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="Japan">
+                            <img src="../img/flags/jp.png" alt="jpn" class="lang-icon">
+                        </span>
+                        <span class="select__item" title="Korea">
+                            <img src="../img/flags/kr.png" alt="eng" class="lang-icon">
+                        </span>
+                    </div>    
+                </div>
+
+                <div class="header__button-box">
+                    <button class="header__button">Get a quote</button>
+                </div>
+
+                <button class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main__back-decor back-decor">
+                <div class="green-frame"></div>
+                <div class="back-decor__image">
+                    <img src="../img/bg-page.png" alt="windmilles">
+                </div>
+
+                <div class="back-decor__container">
+                    <h1 class="back-decor__title">
+                        Наша успешность это результат планомерного научно-технического бизнес-планирования
+                    </h1>
+                    <div class="route">
+                        <a href="../index.html" class="route__el">Home</a>
+                        <a href="#" class="route__el route__el_green">FAQ</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="main__about about">
+                <div class="about__container">
+                    <div class="about-nav__wrapper">
+                        <div class="about-nav__box">
+                            <div class="about__navigation navigation-bar">
+                                <div class="navigation-bar__point navigation-bar__point_active">
+                                    <span class="navigation-bar__text">Стратегия планирования</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2022</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2023</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2024 (1-й квартал)</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2024 (2-й квартал)</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2025 (1-й квартал)</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2025 (2-й квартал)</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2025 (3-й квартал)</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2026</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2026 (1-й квартал)</span>
+                                </div>
+                                <div class="navigation-bar__point">
+                                    <span class="navigation-bar__text">2026 (2-й квартал)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__content about-content">
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                Стратегия <span>планирования</span>
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2022
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2023
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2024 (1-й квартал)
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2024 (2-й квартал)
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2025 (1-й квартал)
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2025 (2-й квартал)
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2025 (3-й квартал)
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2026
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2026 (1-й квартал)
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                        <section class="about-content__section">
+                            <h2 class="about-content__title about-content__title_hero">
+                                2026 (2-й квартал)
+                            </h2>
+                            <p class="about-content__paragraph">
+                                Мы гордимся тем, что наша компания является успешным бизнес-предприятием, способным решать самые трудные задачи по генерированию максимально возможной прибыли для всех заинтересованных сторон. Во многом мы смогли добиться таких бизнес-показателей и успехов благодаря грамотному и профессиональному стратегическому планированию своих действий.
+                            </p>
+                            <p class="about-content__paragraph">
+                                Мы всегда стремимся быть лидерами и стратегическое планирование нашего развития на годы вперед помогает нам не только в наших стремлениях, но и делает нашу компанию и наш бизнес транспарентным и предсказуемым.
+                            </p>
+                            <h2 class="about-content__title">
+                                Это любят инвесторы
+                            </h2>
+                            <ul class="about-content__list list">
+                                <li class="list__point">Больше всего в инвестиционно-трейдинговых компаниях инвесторы ценят их транспарентность и их предсказуемость.</li>
+                                <li class="list__point">Надежность, которая обусловлена профессионализмом и компетентностью процесса стратегического планирования.</li>
+                            </ul>
+                            <h2 class="about-content__title">
+                                Рост макро-показателей
+                            </h2>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__article">
+                    <a href="../index.html" class="footer__logo logo">
+                        <svg class="logo__icon" viewBox="0 0 53 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="logo-folk1" d="M44.8287 7C44.1651 7.41024 39 10 34.5 10C26.5 10 26.5 15.5 24.7758 16.3579C23.0516 17.2158 22.3293 16.241 22.1193 15.3207C21.7208 13.5754 22.4333 11.8857 22.6143 11.4041C22.7953 10.9225 25.0762 6.89533 31.2827 5.43636C38.5668 3.72407 39.2185 5.73215 44.8287 4.44793C48.7532 3.54958 51.5174 0.784801 52 0C48.3805 14.5545 35.6449 17 31.2827 17C29.5438 17 27.0279 13.4097 33 12.5C38.9721 11.5903 44.3914 7.65995 44.8287 7Z" fill="url(#paint0_linear_3_480)"/>
+                            <path class="logo-folk2" d="M8.1713 37C8.83486 36.5898 14 34 18.5 34C26.5 34 26.5 28.5 28.2242 27.6421C29.9484 26.7842 30.6707 27.759 30.8807 28.6793C31.2792 30.4246 30.5667 32.1143 30.3857 32.5959C30.2047 33.0775 27.9238 37.1047 21.7173 38.5636C14.4332 40.2759 13.7815 38.2678 8.1713 39.5521C4.2468 40.4504 1.48259 43.2152 1 44C4.61947 29.4455 17.3551 27 21.7173 27C23.4562 27 25.9721 30.5903 20 31.5C14.0279 32.4097 8.60865 36.3401 8.1713 37Z" fill="url(#paint1_linear_3_480)"/>
+                            <path class="logo-line" d="M26.5 23.8704C0 23.8704 0.59417 31.9568 0 36C0 22.3968 13.6659 20.1296 26.5 20.1296C53 20.1296 52.4058 12.0432 53 8C53 21.6032 39.3341 23.8704 26.5 23.8704Z" fill="url(#paint2_linear_3_480)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_3_480" x1="0" y1="40.5853" x2="51.3377" y2="1.2937" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#77C21C"/>
+                            <stop offset="1" stop-color="#A4D940"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_3_480" x1="0" y1="40.5853" x2="51.3377" y2="1.2937" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#77C21C"/>
+                            <stop offset="1" stop-color="#A4D940"/>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_3_480" x1="0" y1="40.5853" x2="51.3377" y2="1.2937" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#77C21C"/>
+                            <stop offset="1" stop-color="#A4D940"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg class="logo__text" viewBox="0 0 138 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g class="second-word">
+                                <path d="M80.4122 21.1948L79.7648 24H66L71.6558 0H74.9608L69.9523 21.1948H80.4122Z" fill="black"/>
+                                <path d="M91.3244 0H94.6293L88.9735 24H85.6686L91.3244 0Z" fill="black"/>
+                                <path d="M109.849 24C109.44 22.6609 108.952 21.1371 108.384 19.4286C107.816 17.7201 107.191 15.9885 106.51 14.2338C105.851 12.4791 105.17 10.7821 104.466 9.14286C103.761 7.48052 103.069 6.03752 102.387 4.81385L97.8557 24H94.619L100.275 0H103.103C103.83 1.24675 104.568 2.66666 105.317 4.25974C106.09 5.82972 106.816 7.44589 107.498 9.10823C108.202 10.7706 108.849 12.3983 109.44 13.9913C110.031 15.5844 110.519 17.0159 110.905 18.2857L115.13 0H118.367L112.745 24H109.849Z" fill="black"/>
+                                <path d="M118.409 24L124.065 0H138L137.353 2.80519H126.688L124.985 10.0433H134.457L133.809 12.7792H124.371L122.361 21.1948H133.809L133.162 24H118.409Z" fill="black"/>    
+                            </g>
+                            <g class="first-word">
+                                <path d="M0 23.5353L5.50206 0.531121H20.5167L19.4561 4.78008H9.61203L8.55139 9.42739H17.2354L16.2079 13.61H7.5239L6.1981 19.2531H16.8045L15.7438 23.5353H0Z" fill="url(#paint0_linear_67_11268)"/>
+                                <path d="M37.5449 22.5394C36.639 22.982 35.6336 23.3361 34.5287 23.6017C33.4239 23.8672 32.076 24 30.485 24C29.1151 24 27.8555 23.7787 26.7065 23.3361C25.5796 22.8714 24.6073 22.2185 23.7898 21.3776C22.9943 20.5367 22.3756 19.5187 21.9337 18.3237C21.4917 17.1065 21.2708 15.7455 21.2708 14.2407C21.2708 12.5145 21.5691 10.7994 22.1657 9.09544C22.7844 7.39142 23.6793 5.87552 24.8504 4.54772C26.0436 3.19779 27.491 2.10235 29.1924 1.26141C30.9159 0.420471 32.8936 0 35.1253 0C36.186 0 37.2245 0.121716 38.241 0.365147C39.2795 0.608577 40.3622 1.04011 41.4892 1.65975L39.633 5.67635C38.705 5.18949 37.8764 4.85754 37.1472 4.6805C36.418 4.50346 35.6336 4.41494 34.7939 4.41494C33.5344 4.41494 32.3964 4.66943 31.38 5.17842C30.3856 5.68741 29.5238 6.38451 28.7947 7.26971C28.0876 8.13278 27.5462 9.1397 27.1706 10.2905C26.7949 11.4412 26.6071 12.6584 26.6071 13.9419C26.6071 15.8894 27.0269 17.3057 27.8666 18.1909C28.7284 19.0761 29.9547 19.5187 31.5457 19.5187C32.6063 19.5187 33.5786 19.408 34.4624 19.1867C35.3684 18.9654 36.2081 18.6777 36.9814 18.3237L37.5449 22.5394Z" fill="url(#paint1_linear_67_11268)"/>
+                                <path d="M54.2554 4.44813C53.2389 4.44813 52.2888 4.71369 51.4049 5.24481C50.5432 5.77593 49.7808 6.48409 49.1179 7.36929C48.4771 8.25449 47.9689 9.27248 47.5933 10.4232C47.2397 11.574 47.0629 12.758 47.0629 13.9751C47.0629 15.6349 47.4054 16.9848 48.0904 18.0249C48.7975 19.0429 49.9355 19.5519 51.5044 19.5519C52.5208 19.5519 53.4599 19.2863 54.3217 18.7552C55.2056 18.2241 55.9679 17.5159 56.6087 16.6307C57.2716 15.7455 57.7798 14.7386 58.1333 13.61C58.509 12.4592 58.6968 11.2642 58.6968 10.0249C58.6968 8.36515 58.3433 7.02628 57.6362 6.0083C56.9512 4.96819 55.8242 4.44813 54.2554 4.44813ZM50.974 24C49.6261 24 48.3887 23.7787 47.2618 23.3361C46.1349 22.8935 45.1626 22.2628 44.3451 21.444C43.5275 20.603 42.8867 19.5851 42.4227 18.39C41.9807 17.195 41.7598 15.8451 41.7598 14.3403C41.7598 12.6141 42.0581 10.899 42.6547 9.19502C43.2513 7.49101 44.102 5.96404 45.2068 4.61411C46.3338 3.24205 47.7037 2.13555 49.3168 1.29461C50.9299 0.431536 52.7528 0 54.7857 0C56.1336 0 57.371 0.2213 58.4979 0.663901C59.6249 1.1065 60.5971 1.74827 61.4147 2.58921C62.2323 3.40802 62.862 4.41494 63.304 5.60996C63.768 6.80498 64 8.15491 64 9.65975C64 11.3859 63.7017 13.112 63.1051 14.8382C62.5306 16.5422 61.6799 18.0802 60.5529 19.4523C59.4481 20.8022 58.0892 21.8977 56.4761 22.7386C54.863 23.5795 53.029 24 50.974 24Z" fill="url(#paint2_linear_67_11268)"/>    
+                            </g>
+                            <defs>
+                            <linearGradient id="paint0_linear_67_11268" x1="0" y1="24" x2="32.303" y2="-22.1747" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#77C21C"/>
+                            <stop offset="1" stop-color="#A4D940"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_67_11268" x1="0" y1="24" x2="32.303" y2="-22.1747" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#77C21C"/>
+                            <stop offset="1" stop-color="#A4D940"/>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_67_11268" x1="0" y1="24" x2="32.303" y2="-22.1747" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#77C21C"/>
+                            <stop offset="1" stop-color="#A4D940"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+
+                    <p class="footer-paragraph">
+                        Ecoline is a financial and technological global operator that preserves the environment using
+                        both its own and third-party scientific developments in the renewable energy resources field and
+                        reduces pressure on the ecosystem by increasing the efficiency of energy-saving technologies.
+                    </p>
+                </div>
+
+                <div class="footer-navigation__box">
+                    <nav class="footer-navigation">
+                        <div class="footer-navigation__title">Our Links</div>
+
+                        <div class="footer-menu__box">
+                            <ul class="footer-menu">
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Home</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Services</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">FAQ</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Contact us</a>
+                                </li>
+                            </ul>
+                            <ul class="footer-menu">
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">About us</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Term</a>
+                                </li>
+                                <li class="footer-menu__el">
+                                    <a href="#" class="footer-menu__link">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="footer-navigation__box">
+                    <nav class="footer-navigation get-in-touch">
+                        <div class="footer-navigation__title">Get In touch</div>
+
+                        <div class="footer-menu__box">
+                            <div class="get-in-touch__block">
+                                <div class="get-in-touch__icon">
+                                    <svg fill="#fff" viewBox="0 0 50 50" enable-background="new 0 0 50 50">
+
+                                        <g stroke-width="0" />
+
+                                        <g stroke-linecap="round" stroke-linejoin="round" />
+
+                                        <g>
+                                            <path
+                                                d="M41.798,33.763v-18c0-0.513-0.39-0.919-0.887-0.977c-0.009-0.002-0.017-0.004-0.025-0.005 c-0.03-0.003-0.057-0.018-0.088-0.018h-30c-0.032,0-0.06,0.015-0.091,0.018c-0.065,0.006-0.126,0.019-0.189,0.038 c-0.065,0.019-0.125,0.041-0.183,0.072c-0.053,0.028-0.1,0.062-0.147,0.099c-0.056,0.044-0.105,0.09-0.151,0.145 c-0.019,0.023-0.045,0.035-0.062,0.06c-0.019,0.027-0.022,0.06-0.038,0.088c-0.034,0.06-0.059,0.12-0.08,0.187 c-0.02,0.065-0.033,0.129-0.039,0.196c-0.003,0.033-0.019,0.062-0.019,0.096v18c0,0.553,0.447,1,1,1h30 C41.351,34.763,41.798,34.315,41.798,33.763z M37.502,16.763l-11.745,8.092l-11.745-8.092H37.502z M11.798,32.763V17.666 l13.392,9.227c0.171,0.118,0.369,0.177,0.567,0.177s0.396-0.059,0.567-0.177l13.474-9.283v15.153H11.798z" />
+                                        </g>
+
+                                    </svg>
+                                </div>
+                                <div class="get-in-touch__offer">
+                                    <div class="get-in-touch__name">Main office</div>
+                                    <a href="mailto:info@echoline.ltd"
+                                        class="get-in-touch__contact">info@echoline.ltd</a>
+                                </div>
+                            </div>
+                            <div class="get-in-touch__block">
+                                <div class="get-in-touch__icon">
+                                    <svg fill="#fff" viewBox="0 0 50 50" enable-background="new 0 0 50 50">
+
+                                        <g stroke-width="0" />
+
+                                        <g stroke-linecap="round" stroke-linejoin="round" />
+
+                                        <g>
+                                            <path
+                                                d="M41.798,33.763v-18c0-0.513-0.39-0.919-0.887-0.977c-0.009-0.002-0.017-0.004-0.025-0.005 c-0.03-0.003-0.057-0.018-0.088-0.018h-30c-0.032,0-0.06,0.015-0.091,0.018c-0.065,0.006-0.126,0.019-0.189,0.038 c-0.065,0.019-0.125,0.041-0.183,0.072c-0.053,0.028-0.1,0.062-0.147,0.099c-0.056,0.044-0.105,0.09-0.151,0.145 c-0.019,0.023-0.045,0.035-0.062,0.06c-0.019,0.027-0.022,0.06-0.038,0.088c-0.034,0.06-0.059,0.12-0.08,0.187 c-0.02,0.065-0.033,0.129-0.039,0.196c-0.003,0.033-0.019,0.062-0.019,0.096v18c0,0.553,0.447,1,1,1h30 C41.351,34.763,41.798,34.315,41.798,33.763z M37.502,16.763l-11.745,8.092l-11.745-8.092H37.502z M11.798,32.763V17.666 l13.392,9.227c0.171,0.118,0.369,0.177,0.567,0.177s0.396-0.059,0.567-0.177l13.474-9.283v15.153H11.798z" />
+                                        </g>
+
+                                    </svg>
+                                </div>
+                                <div class="get-in-touch__offer">
+                                    <div class="get-in-touch__name">Support</div>
+                                    <a href="mailto:support@echoline.ltd"
+                                        class="get-in-touch__contact">support@echoline.ltd</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/burger.js"></script>
+    <script src="../js/spoiler.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+
+</html>
