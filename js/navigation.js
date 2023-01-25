@@ -16,14 +16,9 @@ window.addEventListener('click', (e) => {
         
         var points = [...document.querySelectorAll('.navigation-bar__point')]
         var elPos = points.indexOf(e.target);
-        console.log(elPos);
-        hideContent(elPos);
+        contentList.forEach(el => {
+            el.classList.remove('about-content__section_showed');
+        });
+        contentList[elPos].classList.add('about-content__section_showed');
     };
 });
-
-function hideContent(index) {
-    contentList.forEach(el => {
-        el.classList.remove('about-content__section_showed');
-    });
-    contentList[index].classList.add('about-content__section_showed');
-}
