@@ -139,6 +139,14 @@ main {
   }
 }
 
+.paragraph {
+  color: #777782;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 133%;
+}
+
 .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -886,6 +894,7 @@ main {
   font-weight: 600;
   font-size: 16px;
   color: #4f4f4f;
+  text-transform: capitalize;
   padding: 8px 0;
   -webkit-transition: color ease-in-out 0.2s;
   transition: color ease-in-out 0.2s;
