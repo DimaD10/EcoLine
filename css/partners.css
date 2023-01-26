@@ -95,6 +95,11 @@
           transform: translateY(-24px);
   background-color: #F1F8FE;
 }
+.subscribe:active .subscribe__wrapper {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+  background-color: #F1F8FE;
+}
 .subscribe__icon {
   position: absolute;
   top: 0;
