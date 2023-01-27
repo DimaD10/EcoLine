@@ -87,8 +87,21 @@
 
 .subscribe {
   font-family: Inter;
-  padding-top: 57px;
   position: relative;
+}
+.subscribe .subscribe__box-wrapper {
+  -webkit-animation: skyingCard infinite ease-in-out 5s;
+          animation: skyingCard infinite ease-in-out 5s;
+}
+.subscribe:nth-child(2n) .subscribe__box-wrapper {
+  -webkit-animation: skyingCard2 infinite ease-in-out 5s;
+          animation: skyingCard2 infinite ease-in-out 5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.subscribe:nth-child(3n) .subscribe__box-wrapper {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .subscribe:hover .subscribe__wrapper {
   -webkit-transform: translateY(-24px);
@@ -116,6 +129,9 @@
 }
 .subscribe__icon img {
   height: 96px;
+}
+.subscribe__box-wrapper {
+  padding-top: 57px;
 }
 .subscribe__wrapper {
   z-index: 5;
@@ -237,4 +253,62 @@
   white-space: nowrap;
   font-weight: 700;
   font-size: 14px;
+}
+
+@-webkit-keyframes skyingCard {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+
+@keyframes skyingCard {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+@-webkit-keyframes skyingCard2 {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  60% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+}
+@keyframes skyingCard2 {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  60% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
 }
