@@ -88,6 +88,7 @@
 .subscribe {
   font-family: Inter;
   position: relative;
+  cursor: pointer;
 }
 .subscribe .subscribe__box-wrapper {
   -webkit-animation: skyingCard infinite ease-in-out 5s;
