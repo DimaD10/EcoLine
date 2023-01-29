@@ -631,3 +631,300 @@
             transform: translateX(10px);
   }
 }
+.main__calculate {
+  margin-bottom: 157px;
+}
+@media (max-width: 1200px) {
+  .main__calculate {
+    margin-bottom: calc(40px + 117 * (100vw - 320px) / 880);
+  }
+}
+
+.calculate-box {
+  margin-top: 32px;
+  border-radius: 16px;
+  border: 1px solid #F1F8FE;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculate-part {
+  width: 33.3333333333%;
+  padding: 16px 24px;
+}
+.calculate-part:not(:last-child) {
+  border-right: 1px solid #F1F5F9;
+}
+.calculate-part .properties-list {
+  gap: 28px;
+}
+.calculate-part .properties__value {
+  color: #222527;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+}
+.calculate-part .properties_green .properties__value {
+  font-family: Inter;
+  color: #2FC622;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+}
+.calculate-part__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 24px;
+}
+.calculate-part__title {
+  font-family: Inter;
+  color: #222527;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+.calculate-part__ref {
+  height: 24px;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
+.calculate-part__ref::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(268.53deg, #4990D2 0.28%, #4E9CD5 100.16%);
+  -webkit-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+}
+.calculate-part__ref:hover::before {
+  opacity: 0.8;
+}
+
+.calculate-graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 40px;
+  padding-left: 48px;
+}
+
+.graph-part {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: auto;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 10px;
+}
+
+.graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Inter;
+  overflow: hidden;
+  height: auto;
+}
+@media (max-width: 1023.98px) {
+  .graph {
+    row-gap: 30px;
+  }
+}
+.graph__mark-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 218px;
+  z-index: -1;
+}
+.graph__mark-frame div {
+  height: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 57px;
+          flex: 0 0 57px;
+  border-bottom: 1px solid #F1F5F9;
+  position: relative;
+}
+.graph__mark-frame div::before {
+  content: "";
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6D8D9E;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(calc(-100% - 6px), 50%);
+          transform: translate(calc(-100% - 6px), 50%);
+}
+.graph__mark-frame div:nth-child(1)::before {
+  content: "0";
+}
+.graph__mark-frame div:nth-child(2)::before {
+  content: "20";
+}
+.graph__mark-frame div:nth-child(3)::before {
+  content: "40";
+}
+.graph__mark-frame div:nth-child(4)::before {
+  content: "60";
+}
+.graph__mark-frame div:nth-child(5)::before {
+  content: "80";
+}
+.graph__mark-frame div:nth-child(6)::before {
+  content: "100";
+}
+.graph__mark-frame div:nth-child(7)::before {
+  content: "140";
+}
+.graph__mark-frame div:nth-child(8)::before {
+  content: "160";
+}
+.graph__value-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 1023.98px) {
+  .graph__value-box {
+    margin: 0 10px;
+  }
+}
+.graph__value-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.graph__value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #9DD53A;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: auto;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+}
+.graph__value-show {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 28px;
+  -webkit-transition: height ease-in-out 1.2s;
+  transition: height ease-in-out 1.2s;
+}
+.graph__level {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 130%);
+          transform: translate(-50%, 130%);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 9px;
+  color: #6D8D9E;
+}
+
+#deposit-graph {
+  background-color: #A2EC48;
+  height: 142.5px;
+}
+
+#grow-graph {
+  background-color: #48D8EC;
+  height: 24.51px;
+}
+
+#total-graph {
+  background-color: #FFA15E;
+  height: 169.29px;
+}
