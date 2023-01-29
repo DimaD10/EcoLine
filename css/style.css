@@ -581,7 +581,7 @@ main {
 .navigation-bar__point_active {
   cursor: default;
 }
-.navigation-bar__point_active span {
+.navigation-bar__point_active .navigation-bar__text {
   color: #9DD53A;
   margin-left: 16px;
   padding-left: 16px;
