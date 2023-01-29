@@ -351,8 +351,6 @@
   transition: opacity ease-in-out 0.3s, transform ease-in-out 0.2s;
   transition: opacity ease-in-out 0.3s, transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
   opacity: 0;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
   display: -webkit-box;
@@ -541,9 +539,8 @@
   background-color: #A2EC48;
   border-radius: 6px;
   width: 28px;
-  -webkit-transition: height ease-in-out 0.4s;
-  transition: height ease-in-out 0.4s;
-  height: 100%;
+  -webkit-transition: height ease-in-out 1.2s;
+  transition: height ease-in-out 1.2s;
   max-height: 175px;
 }
 .graph__level {

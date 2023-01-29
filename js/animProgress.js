@@ -12,7 +12,6 @@ function showProgress() {
 }
 function hideProgress() {
     progressItems.forEach(progress => {
-        const value = progress.dataset.progress;
         const progressBar = progress.querySelector(".progress-lvl");
         progressBar.style.width = `0%`;
     });
@@ -22,7 +21,7 @@ window.addEventListener('scroll', () => {
     const sectionPos = section.getBoundingClientRect().top;
     const screenPos = window.innerHeight;
 
-    if(sectionPos + 200 < screenPos) {
+    if(sectionPos + 100 < screenPos) {
         showProgress();
     } else {
         hideProgress();
