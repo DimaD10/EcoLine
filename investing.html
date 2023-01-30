@@ -120,15 +120,20 @@
                 <div class="select">
                     <div class="select__header" data-action="show">
                         <div class="select__current">
-                            <img src="./img/flags/en.png" alt="eng" class="lang-icon">
+                            <div class="current-box">
+                                <img src="./img/flags/en.png" alt="eng" class="lang-icon">
+                            </div>
                             <div class="select__icon">
                                 <svg viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 23L0.00961876 0.5L25.9904 0.5L13 23Z" fill="black" />
+                                    <path d="M13 23L0.00961876 0.5L25.9904 0.5L13 23Z" fill="black"/>
                                 </svg>
                             </div>
                         </div>
                     </div>
                     <div class="select__body">
+                        <span class="select__item" title="Britain">
+                            <img src="./img/flags/en.png" alt="eng" class="lang-icon">
+                        </span>
                         <span class="select__item" title="Spain">
                             <img src="./img/flags/es.png" alt="esp" class="lang-icon">
                         </span>
@@ -156,7 +161,7 @@
                         <span class="select__item" title="Korea">
                             <img src="./img/flags/kr.png" alt="eng" class="lang-icon">
                         </span>
-                    </div>
+                    </div>    
                 </div>
 
                 <div class="header__button-box">
@@ -2847,6 +2852,72 @@
                         <div class="calculate-part calculator">
                             <div class="calculate-part__head">
                                 <span class="calculate-part__title">Открыть депозит</span>
+                            </div>
+
+                            <div class="calculator-box">
+                                <form action="" class="calculator__form">
+                                    <label for="invest" class="calculator__label">Сумма вклада</label>
+                                    <div class="calculator__input-box">
+                                        <input type="text" class="calculator__input" value="50" pattern="^[0-9]+$">
+
+                                        <div class="calculator__currency">
+                                            <div class="select">
+                                                <div class="select__header" data-action="show">
+                                                    <div class="select__current">
+                                                        <div class="select__icon">
+                                                            <svg viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M13 23L0.00961876 0.5L25.9904 0.5L13 23Z" fill="black" />
+                                                            </svg>
+                                                        </div>
+
+                                                        <div class="current-box">
+                                                            <span class="currency">USD</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="select__body">
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">btc</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">bch</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">bnb</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">USDT (BEP20)</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">USDT (erc20)</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">USDT (TRC20)</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">eth</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">ltc</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">trx</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">usdc</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">ada</span>
+                                                    </span>
+                                                    <span class="select__item" title="Spain">
+                                                        <span class="currency">usd</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
                         <div class="calculate-part">

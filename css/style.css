@@ -412,9 +412,13 @@ main {
   width: 22px;
 }
 
-.spoiler-opened {
+.is-active .select__body {
   height: 226px;
   padding: 4px 6px;
+}
+.is-active .select__icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .spoiler__button-active {
