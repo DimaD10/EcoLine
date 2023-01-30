@@ -2858,7 +2858,7 @@
                                 <form action="" class="calculator__form">
                                     <label for="invest" class="calculator__label">Сумма вклада</label>
                                     <div class="calculator__input-box">
-                                        <input type="text" class="calculator__input" value="50" pattern="^[0-9]+$">
+                                        <input type="text" id="deposit-input" class="calculator__input" value="50" pattern="^[0-9]+$">
 
                                         <div class="calculator__currency">
                                             <div class="select">
@@ -2916,11 +2916,35 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="calculator__bottom">
+                                        <div class="calculator__range-box">
+                                            <div class="progress-line"></div>
+                                            <input type="range" class="calculator__range" min="50" max="300" step="5" value="50">
+                                            <div class="range__min-max">
+                                                <span class="range-value">50 <span class="currency">usd</span></span>
+                                                <span>300 <span class="currency">usd</span></span>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="calculator__button">
+                                            <span>Инвестировать</span>
+                                            <svg viewBox="0 0 18 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M0 5.99998C0 5.63179 0.29702 5.33332 0.663412 5.33332H16.5859C16.9523 5.33332 17.2493 5.63179 17.2493 5.99998C17.2493 6.36817 16.9523 6.66665 16.5859 6.66665H0.663412C0.29702 6.66665 0 6.36817 0 5.99998Z"
+                                                    fill="white" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12.6224 0.154543C12.9039 -0.0811706 13.3222 -0.0429626 13.5568 0.239883L17.7437 5.28867C18.0854 5.70073 18.0854 6.29927 17.7437 6.71133L13.5568 11.7601C13.3222 12.043 12.9039 12.0812 12.6224 11.8455C12.3409 11.6097 12.3029 11.1894 12.5375 10.9065L16.6065 6L12.5375 1.09348C12.3029 0.810634 12.3409 0.390258 12.6224 0.154543Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </form>
 
                             </div>
                         </div>
-                        <div class="calculate-part">
+                        <div class="calculate-part calculator-properties">
                             <div class="calculate-part__head">
                                 <span class="calculate-part__title">Открыть депозит</span>
                                 <a href="#" class="calculate-part__ref">Сменить тариф</a>
@@ -2968,21 +2992,21 @@
 
                                 <div class="graph__value-box">
                                     <div class="graph__value-top">
-                                        <div class="graph__value-show" id="deposit-graph" data-graph="55" title="50$">
+                                        <div class="graph__value-show" id="deposit-graph" data-graph="50" title="50$">
                                         </div>
                                     </div>
                                     <div class="graph__level">Депозит</div>
                                 </div>
                                 <div class="graph__value-box">
                                     <div class="graph__value-top">
-                                        <div class="graph__value-show" id="grow-graph" data-graph="65" title="18.75$">
+                                        <div class="graph__value-show" id="grow-graph" data-graph="18.75" title="18.75$">
                                         </div>
                                     </div>
                                     <div class="graph__level">Прибыль</div>
                                 </div>
                                 <div class="graph__value-box">
                                     <div class="graph__value-top">
-                                        <div class="graph__value-show" id="total-graph" data-graph="40" title="59.37$">
+                                        <div class="graph__value-show" id="total-graph" data-graph="59.37" title="59.37$">
                                         </div>
                                     </div>
                                     <div class="graph__level">Общая прибыль</div>
@@ -3168,6 +3192,7 @@
     <script src="./js/burger.js"></script>
     <script src="./js/spoiler.js"></script>
     <script src="./js/navigation.js"></script>
+    <script src="./js/range.js"></script>
 </body>
 
 </html>
