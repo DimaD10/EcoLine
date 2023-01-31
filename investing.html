@@ -2863,7 +2863,7 @@
                                         <div class="calculator__currency">
                                             <div class="select">
                                                 <div class="select__header" data-action="show">
-                                                    <div class="select__current">
+                                                    <div class="select__current" id="choosen-currency">
                                                         <div class="select__icon">
                                                             <svg viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M13 23L0.00961876 0.5L25.9904 0.5L13 23Z" fill="black" />
@@ -2877,13 +2877,13 @@
                                                 </div>
                                                 <div class="select__body">
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">btc</span>
+                                                        <span class="currency">BTC</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">bch</span>
+                                                        <span class="currency">BCH</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">bnb</span>
+                                                        <span class="currency">BNB</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
                                                         <span class="currency">USDT (BEP20)</span>
@@ -2895,22 +2895,22 @@
                                                         <span class="currency">USDT (TRC20)</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">eth</span>
+                                                        <span class="currency">ETH</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">ltc</span>
+                                                        <span class="currency">LTC</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">trx</span>
+                                                        <span class="currency">TRX</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">usdc</span>
+                                                        <span class="currency">USDC</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">ada</span>
+                                                        <span class="currency">ADA</span>
                                                     </span>
                                                     <span class="select__item" title="Spain">
-                                                        <span class="currency">usd</span>
+                                                        <span class="currency">USD</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -2953,27 +2953,27 @@
                                 <div class="properties">
                                     <span class="properties__name">Мин. Ежедневная прибыль</span>
                                     <div class="properties-decor"></div>
-                                    <span class="properties__value">0.5 <span class="currency">USD</span></span>
+                                    <span class="properties__value" id="min-grow-day">0.5 <span class="currency">USD</span></span>
                                 </div>
                                 <div class="properties">
                                     <span class="properties__name">Макс. Ежедневная прибыль</span>
                                     <div class="properties-decor"></div>
-                                    <span class="properties__value">0.7 <span class="currency">USD</span></span>
+                                    <span class="properties__value" id="max-grow-day">0.7 <span class="currency">USD</span></span>
                                 </div>
                                 <div class="properties properties_green">
                                     <span class="properties__name">Чистая прибыль (срок)</span>
                                     <div class="properties-decor"></div>
-                                    <span class="properties__value">9.37 <span class="currency">USD</span></span>
+                                    <span class="properties__value" id="pure-grow-time">9.37 <span class="currency">USD</span></span>
                                 </div>
                                 <div class="properties properties_green">
                                     <span class="properties__name">Чистая прибыль (месяц)</span>
                                     <div class="properties-decor"></div>
-                                    <span class="properties__value">18.75 <span class="currency">USD</span></span>
+                                    <span class="properties__value" id="pure-grow-month">18.75 <span class="currency">USD</span></span>
                                 </div>
                                 <div class="properties properties_green">
                                     <span class="properties__name">Общая прибыль (+депозит)</span>
                                     <div class="properties-decor"></div>
-                                    <span class="properties__value">59.37 <span class="currency">USD</span></span>
+                                    <span class="properties__value" id="total-grow">59.37 <span class="currency">USD</span></span>
                                 </div>
                             </div>
                         </div>
@@ -2988,25 +2988,36 @@
                                     <div></div>
                                     <div></div>
                                     <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
 
                                 <div class="graph__value-box">
                                     <div class="graph__value-top">
-                                        <div class="graph__value-show" id="deposit-graph" data-graph="50" title="50$">
+                                        <div class="graph__value-show" id="deposit-graph" data-graph="50" title="50 USD">
                                         </div>
                                     </div>
                                     <div class="graph__level">Депозит</div>
                                 </div>
                                 <div class="graph__value-box">
                                     <div class="graph__value-top">
-                                        <div class="graph__value-show" id="grow-graph" data-graph="18.75" title="18.75$">
+                                        <div class="graph__value-show" id="grow-graph" data-graph="18.75" title="9.37 USD">
                                         </div>
                                     </div>
                                     <div class="graph__level">Прибыль</div>
                                 </div>
                                 <div class="graph__value-box">
                                     <div class="graph__value-top">
-                                        <div class="graph__value-show" id="total-graph" data-graph="59.37" title="59.37$">
+                                        <div class="graph__value-show" id="total-graph" data-graph="59.37" title="59.37 USD">
                                         </div>
                                     </div>
                                     <div class="graph__level">Общая прибыль</div>

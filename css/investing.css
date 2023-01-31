@@ -716,10 +716,19 @@
   font-family: "Inter";
   font-weight: 700;
   font-size: 16px;
+  max-width: 95px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 @media (max-width: 767.98px) {
   .calculate-part .properties__value {
     font-size: calc(14px + 2 * (100vw - 320px) / 447.98);
+  }
+}
+@media (max-width: 767.98px) {
+  .calculate-part .properties__value {
+    max-width: calc(85px + 10 * (100vw - 320px) / 447.98);
   }
 }
 .calculate-part .properties_green .properties__value {
@@ -728,10 +737,16 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 16px;
+  max-width: 125px;
 }
 @media (max-width: 767.98px) {
   .calculate-part .properties_green .properties__value {
     font-size: calc(15px + 3 * (100vw - 320px) / 447.98);
+  }
+}
+@media (max-width: 767.98px) {
+  .calculate-part .properties_green .properties__value {
+    max-width: calc(95px + 40 * (100vw - 320px) / 447.98);
   }
 }
 .calculate-part__head {
@@ -904,10 +919,43 @@
   content: "100";
 }
 .graph__mark-frame div:nth-child(7)::before {
-  content: "140";
+  content: "120";
 }
 .graph__mark-frame div:nth-child(8)::before {
+  content: "140";
+}
+.graph__mark-frame div:nth-child(9)::before {
   content: "160";
+}
+.graph__mark-frame div:nth-child(10)::before {
+  content: "180";
+}
+.graph__mark-frame div:nth-child(11)::before {
+  content: "200";
+}
+.graph__mark-frame div:nth-child(12)::before {
+  content: "220";
+}
+.graph__mark-frame div:nth-child(13)::before {
+  content: "240";
+}
+.graph__mark-frame div:nth-child(14)::before {
+  content: "260";
+}
+.graph__mark-frame div:nth-child(15)::before {
+  content: "280";
+}
+.graph__mark-frame div:nth-child(16)::before {
+  content: "300";
+}
+.graph__mark-frame div:nth-child(17)::before {
+  content: "320";
+}
+.graph__mark-frame div:nth-child(18)::before {
+  content: "340";
+}
+.graph__mark-frame div:nth-child(19)::before {
+  content: "360";
 }
 .graph__value-box {
   display: -webkit-box;
@@ -972,8 +1020,8 @@
   cursor: pointer;
   border-radius: 6px;
   width: 28px;
-  -webkit-transition: height ease-in-out 1.2s;
-  transition: height ease-in-out 1.2s;
+  -webkit-transition: height ease-in-out 0.5s;
+  transition: height ease-in-out 0.5s;
 }
 .graph__level {
   position: absolute;
@@ -998,7 +1046,8 @@
 
 #deposit-graph {
   background-color: #A2EC48;
-  height: 142.5px;
+  max-height: 855px;
+  min-height: 142.5px;
 }
 
 #grow-graph {
