@@ -72,7 +72,7 @@ function calcDeposit(val, currency, numAfterDot) {
 var liveprice = {
     "async": true,
     "scroosDomain": true,
-    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinance-peg-bitcoin-cash%2Cbinancecoin%2Cbinance-usd%2Clitecoin%2Ctron%2Cforce-bridge-usdc%2Ccardano&vs_currencies=usd",
+    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinance-peg-bitcoin-cash%2Cbinancecoin%2Cbinance-usd%2Clitecoin%2Ctron%2Cusd-coin%2Ccardano&vs_currencies=usd",
 
     "method": "GET",
     "headers": {}
@@ -102,6 +102,26 @@ $.ajax(liveprice).done(function (response){
         } else if (minValue.textContent.toUpperCase() === "USD".toUpperCase()) {
             let value = range.value;
             let currency = "USD";
+            let numAfterDot = 2;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "LTC".toUpperCase()) {
+            let value = range.value;
+            let currency = "LTC";
+            let numAfterDot = 3;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "ETH".toUpperCase()) {
+            let value = range.value;
+            let currency = "ETH";
+            let numAfterDot = 2;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "TRX".toUpperCase()) {
+            let value = range.value;
+            let currency = "TRX";
+            let numAfterDot = 2;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "USDC".toUpperCase()) {
+            let value = range.value;
+            let currency = "USDC";
             let numAfterDot = 2;
             calcDeposit(value, currency, numAfterDot);
         } else {
@@ -135,10 +155,33 @@ $.ajax(liveprice).done(function (response){
             let currency = "USD";
             let numAfterDot = 2;
             calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "LTC".toUpperCase()) {
+            let value = range.value;
+            let currency = "LTC";
+            let numAfterDot = 3;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "ETH".toUpperCase()) {
+            let value = range.value;
+            let currency = "ETH";
+            let numAfterDot = 2;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "TRX".toUpperCase()) {
+            let value = range.value;
+            let currency = "TRX";
+            let numAfterDot = 2;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "USDC".toUpperCase()) {
+            let value = range.value;
+            let currency = "USDC";
+            let numAfterDot = 2;
+            calcDeposit(value, currency, numAfterDot);
         } else {
             alert("Валюта пока что не добавленная :/");
         }
         changeMinMax(currency);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     });
     
     changeCurrency(response);
@@ -167,13 +210,30 @@ let changeSelectedCurrency = function (rate) {
                 changeMinMaxValue(bitcoinRate, step, fixedAfterDot);
             } else if (minValue.textContent.toUpperCase() === "USD".toUpperCase()) {
                 let dollarRate = 1;
-                let value = range.value;
-                let currency = "USD";
                 let step = 5;
                 let fixedAfterDot = 0;
-                let numAfterDot = 2;
                 changeMinMaxValue(dollarRate, step, fixedAfterDot);
-                calcDeposit(value, currency, numAfterDot);
+            } else if (minValue.textContent.toUpperCase() === "LTC".toUpperCase()) {
+                ltcRate = rate.litecoin.usd;
+                let step = 0.01;
+                let fixedAfterDot = 2;
+                changeMinMaxValue(ltcRate, step, fixedAfterDot);
+            } else if (minValue.textContent.toUpperCase() === "ETH".toUpperCase()) {
+                ethRate = rate.ethereum.usd;
+                let step = 0.01;
+                let fixedAfterDot = 2;
+                changeMinMaxValue(ethRate, step, fixedAfterDot);
+            } else if (minValue.textContent.toUpperCase() === "TRX".toUpperCase()) {
+                trxRate = rate.tron.usd;
+                let step = 0.01;
+                let fixedAfterDot = 2;
+                changeMinMaxValue(trxRate, step, fixedAfterDot);
+            } else if (minValue.textContent.toUpperCase() === "USDC".toUpperCase()) {
+                usdcRate = rate.usd-coin.usd;
+                console.log(usdcRate);
+                let step = 0.01;
+                let fixedAfterDot = 2;
+                changeMinMaxValue(usdcRate, step, fixedAfterDot);
             } else {
                 alert("Валюта пока что не добавленная :/");
             }
@@ -192,7 +252,6 @@ function changeMinMaxValue(curentCurrency, step, fixedAfterDot) {
     let maxValue = document.getElementById("max-count-value"); 
     let minValueValue = minValue.querySelector(".value");
     let maxValueValue = maxValue.querySelector(".value");
-    console.log(minValueValue.textContent);
     minValueValue.textContent = `${(minValueSummar / curentCurrency).toFixed(fixedAfterDot)}`;
     maxValueValue.textContent = `${(maxValueSummar / curentCurrency).toFixed(fixedAfterDot)}`;
 
