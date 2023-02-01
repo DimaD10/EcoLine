@@ -801,6 +801,11 @@
   opacity: 0.8;
 }
 
+#myChart {
+  height: 100%;
+  width: auto;
+}
+
 .calculate-graph {
   grid-area: b;
   display: -webkit-box;
@@ -809,8 +814,6 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-bottom: 40px;
-  padding-left: 48px;
   overflow: hidden;
 }
 @media (max-width: 1100px) {
@@ -820,7 +823,11 @@
 }
 @media (max-width: 767.98px) {
   .calculate-graph {
-    padding-left: calc(32px + 16 * (100vw - 320px) / 447.98);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 360px;
+    height: calc(152px + 208 * (100vw - 320px) / 447.98);
   }
 }
 
@@ -1046,8 +1053,7 @@
 
 #deposit-graph {
   background-color: #A2EC48;
-  max-height: 855px;
-  min-height: 142.5px;
+  height: 142.5px;
 }
 
 #grow-graph {
@@ -1403,6 +1409,16 @@
 }
 .range__min-max span .currency {
   font-size: 14px;
+}
+@media (max-width: 480px) {
+  .range__min-max span .currency {
+    font-size: calc(12px + 2 * (100vw - 320px) / 160);
+  }
+}
+@media (max-width: 480px) {
+  .range__min-max span {
+    font-size: calc(12px + 2 * (100vw - 320px) / 160);
+  }
 }
 
 .hide {
