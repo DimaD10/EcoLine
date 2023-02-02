@@ -72,7 +72,7 @@ function calcDeposit(val, currency, numAfterDot) {
 var liveprice = {
     "async": true,
     "scroosDomain": true,
-    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinance-peg-bitcoin-cash%2Cbinancecoin%2Cbinance-usd%2Clitecoin%2Ctron%2Cusd-coin%2Ccardano&vs_currencies=usd",
+    "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbitcoin-cash%2Cbinancecoin%2Cbinance-usd%2Clitecoin%2Ctron%2Cusd-coin%2Ccardano&vs_currencies=usd",
 
     "method": "GET",
     "headers": {}
@@ -119,10 +119,25 @@ $.ajax(liveprice).done(function (response){
             let currency = "TRX";
             let numAfterDot = 2;
             calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "ADA".toUpperCase()) {
+            let value = range.value;
+            let currency = "ADA";
+            let numAfterDot = 1;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "BNB".toUpperCase()) {
+            let value = range.value;
+            let currency = "BNB";
+            let numAfterDot = 3;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "BCH".toUpperCase()) {
+            let value = range.value;
+            let currency = "BCH";
+            let numAfterDot = 3;
+            calcDeposit(value, currency, numAfterDot);
         } else if (minValue.textContent.toUpperCase() === "USDC".toUpperCase()) {
             let value = range.value;
             let currency = "USDC";
-            let numAfterDot = 2;
+            let numAfterDot = 3;
             calcDeposit(value, currency, numAfterDot);
         } else {
             alert("Валюта пока что не добавленная :/");
@@ -170,10 +185,25 @@ $.ajax(liveprice).done(function (response){
             let currency = "TRX";
             let numAfterDot = 2;
             calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "ADA".toUpperCase()) {
+            let value = range.value;
+            let currency = "ADA";
+            let numAfterDot = 1;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "BNB".toUpperCase()) {
+            let value = range.value;
+            let currency = "BNB";
+            let numAfterDot = 3;
+            calcDeposit(value, currency, numAfterDot);
+        } else if (minValue.textContent.toUpperCase() === "BCH".toUpperCase()) {
+            let value = range.value;
+            let currency = "BCH";
+            let numAfterDot = 3;
+            calcDeposit(value, currency, numAfterDot);
         } else if (minValue.textContent.toUpperCase() === "USDC".toUpperCase()) {
             let value = range.value;
             let currency = "USDC";
-            let numAfterDot = 2;
+            let numAfterDot = 3;
             calcDeposit(value, currency, numAfterDot);
         } else {
             alert("Валюта пока что не добавленная :/");
@@ -228,9 +258,23 @@ let changeSelectedCurrency = function (rate) {
                 let step = 0.01;
                 let fixedAfterDot = 2;
                 changeMinMaxValue(trxRate, step, fixedAfterDot);
+            } else if (minValue.textContent.toUpperCase() === "ADA".toUpperCase()) {
+                adaRate = rate.cardano.usd;
+                let step = 0.01;
+                let fixedAfterDot = 1;
+                changeMinMaxValue(adaRate, step, fixedAfterDot);
+            } else if (minValue.textContent.toUpperCase() === "BNB".toUpperCase()) {
+                bnbRate = rate.binancecoin.usd;
+                let step = 0.01;
+                let fixedAfterDot = 2;
+                changeMinMaxValue(bnbRate, step, fixedAfterDot);
+            } else if (minValue.textContent.toUpperCase() === "BCH".toUpperCase()) {
+                bchRate = rate["bitcoin-cash"].usd;
+                let step = 0.01;
+                let fixedAfterDot = 2;
+                changeMinMaxValue(bchRate, step, fixedAfterDot);
             } else if (minValue.textContent.toUpperCase() === "USDC".toUpperCase()) {
-                usdcRate = rate.usd-coin.usd;
-                console.log(usdcRate);
+                usdcRate = rate["usd-coin"].usd;
                 let step = 0.01;
                 let fixedAfterDot = 2;
                 changeMinMaxValue(usdcRate, step, fixedAfterDot);
