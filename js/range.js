@@ -215,6 +215,7 @@ $.ajax(liveprice).done(function (response){
     });
     
     changeCurrency(response);
+    editMinMax();
 });
 
 function changeCurrency(parrent) {
@@ -306,4 +307,19 @@ function changeMinMaxValue(curentCurrency, step, fixedAfterDot) {
 
     valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
     range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;
+}
+
+
+
+//window.addEventListener("load", editMinMax());
+
+function editMinMax() {
+
+    let currentTariffParrent = document.querySelector(".tabs-list");
+    let currentTarif = currentTariffParrent.querySelector(".navigation-bar__point_active");
+    let tarifCurrency = currentTarif.querySelector(".navigation-bar__text");
+
+    if (tarifCurrency.textContent.toUpperCase() === "Bitcoin".toUpperCase()) {
+        console.log("bitcoin current");
+    }
 }
