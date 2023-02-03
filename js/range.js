@@ -31,14 +31,6 @@ const inputValue = document.querySelector(".calculator__input");
 const range = document.querySelector(".calculator__range");
 const rangeProgress = document.querySelector(".progress-line");
 
-//const gutter = 2.85;
-
-const minValueSummar = 50;
-const maxValueSummar = 1000000;
-
-
-
-
 
 function calcDeposit(val, currency, numAfterDot) {
     const minGrowCoef = 0.01;
@@ -66,8 +58,6 @@ function calcDeposit(val, currency, numAfterDot) {
     myChart.data.datasets[0].data[2] = `${val * totalGrowCoef}`;
     myChart.update();
 }
-
-
 
 var liveprice = {
     "async": true,
@@ -216,7 +206,7 @@ $.ajax(liveprice).done(function (response){
 
 
     changeCurrency(response);
-    editMinMax();
+    editMinMax(response);
     checkCurrentTarif(response);
 
     const stepList = document.querySelectorAll(".navigation-bar__point");
@@ -242,7 +232,7 @@ $.ajax(liveprice).done(function (response){
             });
             contentList[elPos].classList.add('about-content__section_showed');
 
-            checkCurrentTarif(response)
+            checkCurrentTarif(response);
         };
     });
 });
@@ -264,50 +254,167 @@ let changeSelectedCurrency = function (rate) {
             let minValueParrent = document.getElementById("min-count-value"); 
             let minValue = minValueParrent.querySelector(".currency"); 
             if (minValue.textContent.toUpperCase() === "BTC".toUpperCase()) {
-                bitcoinRate = rate.bitcoin.usd;
-                let step = 0.0002;
-                let fixedAfterDot = 4;
-                changeMinMaxValue(bitcoinRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('BTC-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "USD".toUpperCase()) {
-                let dollarRate = 1;
-                let step = 5;
-                let fixedAfterDot = 0;
-                changeMinMaxValue(dollarRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('USD-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "LTC".toUpperCase()) {
-                ltcRate = rate.litecoin.usd;
-                let step = 0.01;
-                let fixedAfterDot = 2;
-                changeMinMaxValue(ltcRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('LTC-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "ETH".toUpperCase()) {
-                ethRate = rate.ethereum.usd;
-                let step = 0.01;
-                let fixedAfterDot = 2;
-                changeMinMaxValue(ethRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('ETH-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "TRX".toUpperCase()) {
-                trxRate = rate.tron.usd;
-                let step = 0.01;
-                let fixedAfterDot = 2;
-                changeMinMaxValue(trxRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('TRX-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "ADA".toUpperCase()) {
-                adaRate = rate.cardano.usd;
-                let step = 0.01;
-                let fixedAfterDot = 1;
-                changeMinMaxValue(adaRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('ADA-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "BNB".toUpperCase()) {
-                bnbRate = rate.binancecoin.usd;
-                let step = 0.01;
-                let fixedAfterDot = 2;
-                changeMinMaxValue(bnbRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('BNB-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "BCH".toUpperCase()) {
-                bchRate = rate["bitcoin-cash"].usd;
-                let step = 0.01;
-                let fixedAfterDot = 2;
-                changeMinMaxValue(bchRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('BCH-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else if (minValue.textContent.toUpperCase() === "USDC".toUpperCase()) {
-                usdcRate = rate["usd-coin"].usd;
-                let step = 0.01;
-                let fixedAfterDot = 2;
-                changeMinMaxValue(usdcRate, step, fixedAfterDot);
+                const stepList = document.querySelectorAll(".navigation-bar__point");
+                const contentList = document.querySelectorAll(".about-content__section");
+
+                let navPoint = document.getElementById('usdc-tarif');
+                stepList.forEach(el => {
+                    el.classList.remove("navigation-bar__point_active");
+                });
+                navPoint.classList.add("navigation-bar__point_active");
+                var points = [...document.querySelectorAll('.navigation-bar__point')]
+                var elPos = points.indexOf(navPoint);
+                contentList.forEach(el => {
+                    el.classList.remove('about-content__section_showed');
+                });
+                contentList[elPos].classList.add('about-content__section_showed');
+
+                checkCurrentTarif(rate);
+                changeMinMaxValue();
             } else {
                 alert("Валюта пока что не добавленная :/");
             }
@@ -321,41 +428,57 @@ function changeMinMax(currency) {
     minValue.querySelector(".currency").textContent = `${currency}`;
     maxValue.querySelector(".currency").textContent = `${currency}`;
 }
-function changeMinMaxValue(curentCurrency, step, fixedAfterDot) {
-    let minValue = document.getElementById("min-count-value"); 
-    let maxValue = document.getElementById("max-count-value"); 
-    let minValueValue = minValue.querySelector(".value");
-    let maxValueValue = maxValue.querySelector(".value");
-    minValueValue.textContent = `${(minValueSummar / curentCurrency).toFixed(fixedAfterDot)}`;
-    maxValueValue.textContent = `${(maxValueSummar / curentCurrency).toFixed(fixedAfterDot)}`;
-
-    inputValue.value = `${(minValueSummar / curentCurrency).toFixed(fixedAfterDot)}`;
-    range.min = `${(minValueSummar / curentCurrency).toFixed(fixedAfterDot)}`;
-    range.max = `${(maxValueSummar / curentCurrency).toFixed(fixedAfterDot)}`;
-    range.step = step;
-
+function changeMinMaxValue() {
     valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
     range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;
 }
 
-
-
-
-function editMinMax() {
+function editMinMax(course) {
     const tarifList = document.querySelectorAll(".navigation-bar__text");
+
     tarifList.forEach(item => {
         if (item.textContent.toUpperCase() === "Bitcoin".toUpperCase()) {
             let valueParrent = item.closest(".navigation-bar__point");
-            let minValue = valueParrent.querySelector(".crypto-course__num_min");
-            let maxValue = valueParrent.querySelector(".crypto-course__num_max");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "BTC";
+            let numAfterDot = 5;
+            let step = 0.00001;
 
-            console.log(minValue.textContent);
+            minValue.textContent = `${(minValue.textContent / course.bitcoin.usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course.bitcoin.usd).toFixed(numAfterDot)}`;
 
-            console.log("Bitcoin");
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
+
+            //editCalcMinMax(minValue.textContent, maxValue.textContent, step);
         } else if (item.textContent.toUpperCase() === "Bitcoin cash".toUpperCase()) {
-            console.log("Bitcoin Cash");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "BCH";
+            let numAfterDot = 5;
+
+            minValue.textContent = `${(minValue.textContent / course["bitcoin-cash"].usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course["bitcoin-cash"].usd).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else if (item.textContent.toUpperCase() === "Binance Coin".toUpperCase()) {
-            console.log("Binance Coin");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "BNB";
+            let numAfterDot = 5;
+
+            minValue.textContent = `${(minValue.textContent / course.binancecoin.usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course.binancecoin.usd).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else if (item.textContent.toUpperCase() === "Tether (BEP20)".toUpperCase()) {
             console.log("Tether (BEP20)");
         } else if (item.textContent.toUpperCase() === "Tether (ERC20)".toUpperCase()) {
@@ -363,23 +486,103 @@ function editMinMax() {
         } else if (item.textContent.toUpperCase() === "Tether (TRC20)".toUpperCase()) {
             console.log("Tether (TRC20)");
         } else if (item.textContent.toUpperCase() === "Ethereum".toUpperCase()) {
-            console.log("Ethereum");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "ETH";
+            let numAfterDot = 5;
+
+            minValue.textContent = `${(minValue.textContent / course.ethereum.usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course.ethereum.usd).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else if (item.textContent.toUpperCase() === "Litecoin".toUpperCase()) {
-            console.log("Litecoin");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "LTC";
+            let numAfterDot = 3;
+
+            minValue.textContent = `${(minValue.textContent / course.litecoin.usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course.litecoin.usd).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else if (item.textContent.toUpperCase() === "Tron".toUpperCase()) {
-            console.log("Tron");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "TRX";
+            let numAfterDot = 2;
+
+            minValue.textContent = `${(minValue.textContent / course.tron.usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course.tron.usd).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else if (item.textContent.toUpperCase() === "USD coin".toUpperCase()) {
-            console.log("USD Coin");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "USDC";
+            let numAfterDot = 2;
+
+            minValue.textContent = `${(minValue.textContent / course["usd-coin"].usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course["usd-coin"].usd).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else if (item.textContent.toUpperCase() === "Cardano".toUpperCase()) {
-            console.log("Cardano");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "ada";
+            let numAfterDot = 2;
+
+            minValue.textContent = `${(minValue.textContent / course.cardano.usd).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / course.cardano.usd).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else if (item.textContent.toUpperCase() === "USD".toUpperCase()) {
-            console.log("USD");
+            let valueParrent = item.closest(".navigation-bar__point");
+            let minValue = valueParrent.querySelector(".crypto-dep-min");
+            let maxValue = valueParrent.querySelector(".crypto-dep-max");
+            let currency = "usd";
+            let numAfterDot = 0;
+
+            minValue.textContent = `${(minValue.textContent / 1).toFixed(numAfterDot)}`;
+            maxValue.textContent = `${(maxValue.textContent / 1).toFixed(numAfterDot)}`;
+
+            valueParrent.querySelectorAll(".crypto-course__currency").forEach(el => {
+                el.textContent = currency;
+            });
         } else {
-            console.log("error");
+            alert("Валюта не найдена.")
         }
     });
 }
+function editCalcMinMax(minV, maxV, step) {
+    let minRangeValueParrent = document.getElementById("min-count-value");
+    let minRangeValue = minRangeValueParrent.querySelector(".value");
+    let maxRangeValueParrent = document.getElementById("max-count-value"); 
+    let maxRangeValue = maxRangeValueParrent.querySelector(".value");
 
+    minRangeValue.textContent = minV;
+    maxRangeValue.textContent = maxV;
+
+    inputValue.value = minV;
+    range.min = minV;
+    range.max = maxV;
+
+    range.step = step;
+}
 
 function checkCurrentTarif(rating) {
     let currentTariffParrent = document.querySelector(".tabs-list");
@@ -392,39 +595,75 @@ function checkCurrentTarif(rating) {
         changeMinMax(currency);
 
         bitcoinRate = rating.bitcoin.usd;
-        let step = 0.0002;
+        let step = 0.00001;
         let fixedAfterDot = 4;
         changeMinMaxValue(bitcoinRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('BTC-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "Bitcoin cash".toUpperCase()) {
         currency = "BCH";
         selectChoose(currency);
         changeMinMax(currency);
 
         bchRate = rating["bitcoin-cash"].usd;
-        let step = 0.01;
+        let step = 0.00001;
         let fixedAfterDot = 2;
         changeMinMaxValue(bchRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('BCH-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+        
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "Binance Coin".toUpperCase()) {
         currency = "BNB";
         selectChoose(currency);
         changeMinMax(currency);
 
         bnbRate = rating.binancecoin.usd;
-        let step = 0.01;
+        let step = 0.00001;
         let fixedAfterDot = 2;
         changeMinMaxValue(bnbRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('BNB-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "Tether (BEP20)".toUpperCase()) {
-        currency = "USDT (BEP20)";
-        selectChoose(currency);
-        changeMinMax(currency);
+        alert("Этот тариф еще не добавлен(");
     } else if (tarifCurrency.textContent.toUpperCase() === "Tether (ERC20)".toUpperCase()) {
-        currency = "USDT (ERC20)";
-        selectChoose(currency);
-        changeMinMax(currency);
+        alert("Этот тариф еще не добавлен(");
     } else if (tarifCurrency.textContent.toUpperCase() === "Tether (TRC20)".toUpperCase()) {
-        currency = "USDT (TRC20)";
-        selectChoose(currency);
-        changeMinMax(currency);
+        alert("Этот тариф еще не добавлен(");
     } else if (tarifCurrency.textContent.toUpperCase() === "Ethereum".toUpperCase()) {
         currency = "Eth";
         selectChoose(currency);
@@ -434,6 +673,20 @@ function checkCurrentTarif(rating) {
         let step = 0.01;
         let fixedAfterDot = 2;
         changeMinMaxValue(ethRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('ETH-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "Litecoin".toUpperCase()) {
         currency = "LTC";
         selectChoose(currency);
@@ -443,8 +696,22 @@ function checkCurrentTarif(rating) {
         let step = 0.01;
         let fixedAfterDot = 2;
         changeMinMaxValue(ltcRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('LTC-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "Tron".toUpperCase()) {
-        currency = "trx";
+        currency = "TRX";
         selectChoose(currency);
         changeMinMax(currency);
 
@@ -452,6 +719,20 @@ function checkCurrentTarif(rating) {
         let step = 0.01;
         let fixedAfterDot = 2;
         changeMinMaxValue(trxRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('TRX-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+        
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "USD coin".toUpperCase()) {
         currency = "USDC";
         selectChoose(currency);
@@ -461,6 +742,20 @@ function checkCurrentTarif(rating) {
         let step = 0.01;
         let fixedAfterDot = 2;
         changeMinMaxValue(usdcRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('usdc-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "Cardano".toUpperCase()) {
         currency = "ada";
         selectChoose(currency);
@@ -470,6 +765,20 @@ function checkCurrentTarif(rating) {
         let step = 0.01;
         let fixedAfterDot = 1;
         changeMinMaxValue(adaRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('ADA-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else if (tarifCurrency.textContent.toUpperCase() === "USD".toUpperCase()) {
         currency = "USD";
         selectChoose(currency);
@@ -479,14 +788,36 @@ function checkCurrentTarif(rating) {
         let step = 5;
         let fixedAfterDot = 0;
         changeMinMaxValue(dollarRate, step, fixedAfterDot);
+
+        let valueParrent = document.querySelector(".navigation-bar__point_active");
+        let minValue = valueParrent.querySelector(".crypto-dep-min");
+        let maxValue = valueParrent.querySelector(".crypto-dep-max");
+
+        var points = [...document.querySelectorAll('.navigation-bar__point')];
+        let currentBlock = document.getElementById('USD-tarif');
+        var elPos = points.indexOf(currentBlock);
+        duplicateMinMaxValues(currency, minValue, maxValue, elPos)
+
+        editCalcMinMax(minValue.textContent, maxValue.textContent, step);
+
+        valPercent = ((range.value - range.min) / (range.max - range.min)) * 100;
+        range.style.background = `linear-gradient(to right, #A2EC48 ${valPercent}%, #E4EEF5 ${valPercent}%)`;    
     } else {
-        console.log("error");
+        alert("Error");
     }
-
-
 
     function selectChoose(myCurrency) {
         let selectedCurrency = document.getElementById('choosen-currency').querySelector('.currency');
         selectedCurrency.textContent = myCurrency.toUpperCase();
     }
+}
+
+function duplicateMinMaxValues(currency, minRV, maxRV, index) {
+    const contentList = document.querySelectorAll(".about-content__section");
+
+    let minBlock = contentList[index].querySelector('.min-tarif-dep');
+    let maxBlock = contentList[index].querySelector('.max-tarif-dep');
+
+    minBlock.textContent = `${minRV.textContent} ${currency}`;
+    maxBlock.textContent = `${maxRV.textContent} ${currency}`;
 }

@@ -71,9 +71,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   gap: 32px;
 }
 @media (max-width: 1200px) {
@@ -88,6 +85,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.content-wrapper {
+  width: 100%;
 }
 
 .about__content {
@@ -170,10 +171,12 @@
 }
 .crypto-course__currency {
   text-transform: uppercase;
-  margin: 0 4px;
+  margin-right: 4px;
 }
 
 .about-content {
+  position: sticky;
+  top: 20px;
   width: 100%;
 }
 .about-content__content {
@@ -238,6 +241,14 @@
   position: relative;
   cursor: pointer;
 }
+@media (max-width: 1200px) {
+  .tabs__tab {
+    padding-top: calc(10px + 6 * (100vw - 320px) / 880);
+    padding-bottom: calc(10px + 6 * (100vw - 320px) / 880);
+    padding-left: calc(12px + 12 * (100vw - 320px) / 880);
+    padding-right: calc(12px + 12 * (100vw - 320px) / 880);
+  }
+}
 .tabs__tab:hover span {
   color: #222527;
 }
@@ -264,6 +275,7 @@
   transition: opacity ease-in-out 0.2s, transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
 }
 .tabs__tab span {
+  text-align: center;
   pointer-events: none;
   font-family: Inter;
   font-weight: 700;
@@ -1484,6 +1496,10 @@
   .range__min-max span {
     font-size: calc(12px + 2 * (100vw - 320px) / 160);
   }
+}
+
+.min-tarif-dep, .max-tarif-dep {
+  text-transform: uppercase;
 }
 
 .hide {
