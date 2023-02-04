@@ -5885,6 +5885,8 @@ main {
   width: 71px;
   height: 62px;
   fill: #D6EDBA;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 @media (max-width: 1200px) {
   .review__decor svg {
