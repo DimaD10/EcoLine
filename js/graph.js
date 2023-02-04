@@ -1,29 +1,41 @@
 const startPos = document.querySelector('.graph')
 
-const graphItems = document.querySelectorAll(".graph__value-box");
-
+const graphItems = document.querySelectorAll(".graph__value-show");
+const graphValues = document.querySelectorAll(".progress-procent");
+const graphCount = document.querySelectorAll(".graph__value");
 
 function showGProgress() {
-    graphItems.forEach(progress => {
-        const progressBar = progress.querySelector(".graph__value-show");
-        const value = progressBar.dataset.graph;
-        progressBar.style.height = `${value}%`;
-    });
+    for (let i = 0; i < graphItems.length; i++) {
+        const elGraph = graphItems[i];
+        const elVal = graphValues[i];
+        const elCount = graphCount[i];
+        
+        elGraph.style.height = elVal.textContent;
+        elCount.textContent = elVal.textContent;
+    }
 }
 function hideGProgress() {
     graphItems.forEach(progress => {
-        const progressBar = progress.querySelector(".graph__value-show");
-        progressBar.style.height = `0%`;
+        progress.style.height = `0%`;
     });
 }
 
-window.addEventListener('scroll', () => {
-    const sectionPos = startPos.getBoundingClientRect().top;
-    const screenPos = window.innerHeight;
-
-    if(sectionPos + 100 < screenPos) {
-        showGProgress();
-    } else {
-        hideGProgress();
-    }
-})
+function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            showGProgress();
+        } else {
+            hideGProgress();
+        }
+    });
+  }
+  
+let props = {
+    threshold: [0.9],
+};
+  
+let observered = new IntersectionObserver(onEntry, props);
+let graphs = document.querySelectorAll(".graph-part");
+for (let elm of graphs) {
+    observered.observe(elm);
+}

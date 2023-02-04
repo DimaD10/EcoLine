@@ -5,10 +5,11 @@ const progressItems = document.querySelectorAll(".level");
 
 function showProgress() {
     progressItems.forEach(progress => {
-        const value = progress.dataset.progress;
+        const value = progress.querySelector(".progress-procent");
         const progressBar = progress.querySelector(".progress-lvl");
-        progressBar.style.width = `${value}%`;
+        progressBar.style.width = value.textContent;
     });
+    console.log(progressItems);
 }
 function hideProgress() {
     progressItems.forEach(progress => {
