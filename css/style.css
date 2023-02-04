@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 /*ОБНУЛЕНИЕ СТИЛЕЙ*/
 * {
   margin: 0;
@@ -663,6 +664,14 @@ main {
 }
 .about-content__list {
   font-family: Roboto;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header {
@@ -6117,6 +6126,7 @@ main {
 }
 .footer__logo {
   max-width: 320px;
+  z-index: 40;
   width: 100%;
 }
 @media (max-width: 991.98px) {
